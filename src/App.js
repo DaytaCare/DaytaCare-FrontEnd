@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav } from 'react-bootstrap';
@@ -29,7 +28,7 @@ class App extends React.Component {
             <Route path="/AboutUs">
             <h1>About Us</h1>
               {/* <AboutUs /> */}
-            </Route> 
+            </Route>
             <Route exact path="/DaycareSearch">
               <h1>Find a Daycare</h1>
               {/* <DaycareSearch /> */}
