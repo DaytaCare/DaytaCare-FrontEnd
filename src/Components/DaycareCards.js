@@ -1,19 +1,24 @@
 import React from 'react';
-import { Card, Container } from 'react-bootstrap';
+import { Card, Container, Row, Col } from 'react-bootstrap';
 
 function DaycareCards(props) {
 
   const { daycare } = props;
 
+
+  function showModal() {
+
+  }
+
   return (
     <Container>
-    <Card className='text-center' style={{ width: '25rem' }}>
-      <Card.Body>
-        <Card.Title>{daycare.name}</Card.Title>
-        <Card.Text>{daycare.streetAddress}, {daycare.city}, {daycare.state}</Card.Text>
-        <Card.Text>{daycare.phone}</Card.Text>
-      </Card.Body>
-    </Card>
+      <Card className='text-center' onClick={showModal} style={{ width: '25rem' }}>
+        <Card.Body>
+          <Card.Title>{daycare.name}</Card.Title>
+          <Card.Text>{daycare.streetAddress}, {daycare.city}, {daycare.state}</Card.Text>
+          <Card.Text>{daycare.phone}</Card.Text>
+        </Card.Body>
+      </Card>
     </Container>
   )
 }
