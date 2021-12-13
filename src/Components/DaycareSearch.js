@@ -12,13 +12,13 @@ function DaycareSearch() {
     return (<Spinner animation="grow" variant="danger" />);
   }
 
-return (
-  <>
-    {daycares.map(daycare => (
-      <DaycareCards daycare={daycare} />
-    ))}
-  </>
-)
+  return (
+    <>
+      {daycares.map(daycare => (
+        <DaycareCards daycare={daycare} />
+      ))}
+    </>
+  )
 }
 
 export default DaycareSearch;
