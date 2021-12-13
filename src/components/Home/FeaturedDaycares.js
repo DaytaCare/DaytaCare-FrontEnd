@@ -6,8 +6,7 @@ function FeaturedDaycares() {
     <div>
       {/* <h1>Featured Daycares</h1> */}
 
-      <div><h5>About DaytaCare</h5>
-      <p>LoremIpsumBlahBlahBlah</p>
+      <div><h5>About the Site</h5>
       </div>
       <Row xs={1} md='auto' className="g-4">
         {Array.from({ length: 3 }).map((_, idx) => (
