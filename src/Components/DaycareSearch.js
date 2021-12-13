@@ -1,5 +1,6 @@
 import React from "react";
 import { Spinner } from 'react-bootstrap';
+//import DaycareCards from './DaycareCards'
 import useFetch from '../Components/Hooks/useFetch';
 
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/parents/search';
@@ -12,11 +13,11 @@ function DaycareSearch() {
   }
 
 return (
-  <>
-    {daycares.map(daycare => (
+  <div>
+       {daycares.map(daycare => (
       <li key={daycare.id}>{daycare.name}</li>
     ))}
-  </>
+  </div>
 )
 }
 
