@@ -1,11 +1,12 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Container } from 'react-bootstrap';
 
 function DaycareCards(props) {
 
   const { daycare } = props;
 
   return (
+    <Container>
     <Card className='text-center' style={{ width: '25rem' }}>
       <Card.Body>
         <Card.Title>{daycare.name}</Card.Title>
@@ -13,6 +14,7 @@ function DaycareCards(props) {
         <Card.Text>{daycare.phone}</Card.Text>
       </Card.Body>
     </Card>
+    </Container>
   )
 }
 
