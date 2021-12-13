@@ -1,4 +1,4 @@
-import useAuth from '../../Hooks/useAuth'
+import useAuth from '../Hooks/useAuth';
 
 export default function Login() {
     const { login } = useAuth();
