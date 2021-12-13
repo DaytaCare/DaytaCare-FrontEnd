@@ -14,7 +14,7 @@ function DaycareSearch() {
 return (
   <>
     {daycares.map(daycare => (
-      <DaycareCard />
+      <li key={daycare.id}>{daycare.name}</li>
     ))}
   </>
 )
