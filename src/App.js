@@ -18,18 +18,18 @@ class App extends React.Component {
         <Router>
           <Navbar>
             <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/aboutUs">About Us</Nav.Link>
-            <Nav.Link as={Link} to="/daycareSearch">Find a Daycare</Nav.Link>
+            <Nav.Link as={Link} to="/AboutUs">About Us</Nav.Link>
+            <Nav.Link as={Link} to="/DaycareSearch">Find a Daycare</Nav.Link>
           </Navbar>
           <Switch>
             <Route exact path="/">
               <h1>Home</h1>
             </Route>
-            <Route path="/aboutUs">
+            <Route path="/AboutUs">
             <h1>About Us</h1>
               {/* <AboutUs /> */}
             </Route> 
-            <Route exact path="/daycareSearch">
+            <Route exact path="/DaycareSearch">
               <h1>Find a Daycare</h1>
               {/* <DaycareSearch /> */}
             </Route>
