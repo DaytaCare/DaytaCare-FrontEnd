@@ -12,6 +12,7 @@ import Home from './Components/Home/Home'
 import AboutUs from './Components/AboutUs/AboutUs.js';
 import DaycareSearch from './Components/DaycareSearch';
 import Footer from './Components/Home/Footer';
+import Login from './Components/Auth/Login';
 
 
 class App extends React.Component {
@@ -35,8 +36,10 @@ class App extends React.Component {
             <h1>About Us</h1>
               <AboutUs />
             </Route>
+            <Route path="/Login">
+            <Login />
+          </Route>
             <Route exact path="/DaycareSearch">
-              <h1>Find a Daycare</h1>
               <DaycareSearch />
             </Route>
           </Switch>
