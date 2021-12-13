@@ -15,10 +15,10 @@ function DaycareSearch() {
   return (
     <div>
       {daytaCareApi.map(daycare => (
-        <ul>
-          <li></li>
-        </ul>
+        <li key={daycare.id}>{daycare.name}</li>
       ))}
     </div>
   )
 }
+
+export default DaycareSearch;
