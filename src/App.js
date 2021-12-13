@@ -9,6 +9,7 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import DaycareSearch from './Components/DaycareSearch';
 
 class App extends React.Component {
 
@@ -32,7 +33,7 @@ class App extends React.Component {
             </Route> 
             <Route exact path="/DaycareSearch">
               <h1>Find a Daycare</h1>
-              {/* <DaycareSearch /> */}
+              <DaycareSearch />
             </Route>
           </Switch>
         </Router>
