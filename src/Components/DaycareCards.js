@@ -6,7 +6,7 @@ function DaycareCards(props) {
   const { daycare } = props;
 
   return (
-    <Card style={{ width: '32rem' }}>
+    <Card style={{ width: '25rem' }}>
       <Card.Body>
         <Card.Title>{daycare.name}</Card.Title>
         <Card.Text>
