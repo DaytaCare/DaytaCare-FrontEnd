@@ -1,6 +1,6 @@
 import React from "react";
 import { Spinner } from 'react-bootstrap';
-import useFetch from './Hooks/useFetch';
+import useFetch from './Hooks2/useFetch';
 
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/parents/search';
 
