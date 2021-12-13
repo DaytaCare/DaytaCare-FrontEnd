@@ -8,7 +8,6 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import Header from './components/Home/Header'
 import Home from './components/Home/Home'
 import Footer from './components/Home/Footer'
 class App extends React.Component {
@@ -17,22 +16,22 @@ class App extends React.Component {
 
     return (
       <>
-        <Header/>
           <Router>
           <Navbar>
+          <Navbar.Brand href="#">DaytaCare</Navbar.Brand>
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/AboutUs">About Us</Nav.Link>
             <Nav.Link as={Link} to="/DaycareSearch">Find a Daycare</Nav.Link>
           </Navbar>
             <Switch>
-              <Route exact path="/">
+              <Route path="/" exact>
                 <Home/>
               </Route>
               <Route path="/AboutUs">
               <h1>About Us</h1>
                 {/* <AboutUs /> */}
               </Route>
-              <Route exact path="/DaycareSearch">
+              <Route path="/DaycareSearch">
                 <h1>Find a Daycare</h1>
                 {/* <DaycareSearch /> */}
               </Route>
