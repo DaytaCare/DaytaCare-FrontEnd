@@ -1,7 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav } from 'react-bootstrap';
-import AboutUs from './components/AboutUs/AboutUs.js';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -9,8 +8,12 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import Home from './components/Home/Home'
-import Footer from './components/Home/Footer'
+import Home from './Components/Home/Home'
+import AboutUs from './Components/AboutUs/AboutUs.js';
+import DaycareSearch from './Components/DaycareSearch';
+import Footer from './Components/Home/Footer';
+
+
 class App extends React.Component {
 
   render() {
@@ -34,7 +37,7 @@ class App extends React.Component {
             </Route>
             <Route exact path="/DaycareSearch">
               <h1>Find a Daycare</h1>
-              {/* <DaycareSearch /> */}
+              <DaycareSearch />
             </Route>
           </Switch>
           <Footer/>

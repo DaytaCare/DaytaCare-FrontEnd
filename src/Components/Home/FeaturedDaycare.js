@@ -1,11 +1,15 @@
 import {Row, Col, Card, ListGroup, ListGroupItem} from 'react-bootstrap'
 
-function FeaturedDaycares() {
+function FeaturedDaycare() {
+
+  // const featuredData = {
+  //   name: this.name,
+
+  // };
+
   return(
     <>
     <div>
-      {/* <h1>Featured Daycares</h1> */}
-
       <div><h5>About the Site</h5>
       </div>
       <Row xs={1} md='auto' className="g-4">
@@ -44,4 +48,4 @@ function FeaturedDaycares() {
   )
 }
 
-export default FeaturedDaycares;
+export default FeaturedDaycare;
