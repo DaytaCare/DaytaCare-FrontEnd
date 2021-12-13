@@ -12,7 +12,7 @@ import Home from './Components/Home/Home'
 import AboutUs from './Components/AboutUs/AboutUs.js';
 import DaycareSearch from './Components/DaycareSearch';
 import Footer from './Components/Home/Footer';
-import Login from './Components/auth/login';
+import Login from './Components/Auth/Login';
 
 
 class App extends React.Component {
@@ -40,7 +40,6 @@ class App extends React.Component {
             <Login />
           </Route>
             <Route exact path="/DaycareSearch">
-              <h1>Find a Daycare</h1>
               <DaycareSearch />
             </Route>
           </Switch>
