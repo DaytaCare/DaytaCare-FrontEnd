@@ -5,27 +5,16 @@ import useFetch from '../Components/Hooks/useFetch';
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/parents/search';
 
 function DaycareSearch() {
-  const { daycares, setDaycares } = useFetch(daytaCareApi);
+  const { dayCares } = useFetch(daytaCareApi);
 
-  if (!daytaCareApi) {
+  if (!dayCares) {
     return (<Spinner animation="grow" variant="danger" />);
   }
 
-  const allDaycares = [
-    ...daycares,
-  ];
-
-  setDaycares(daycares);
-
-  fetch(`${daytaCareApi}`, {
-    method: 'get'
-  })
-}
-
 return (
   <div>
-    {daytaCareApi.map(daycare => (
-      <li key={daycare.id}>{daycare.name}</li>
+    {dayCares.map(dayCare => (
+      <li key={dayCare.id}>{dayCare.name}</li>
     ))}
   </div>
 )
