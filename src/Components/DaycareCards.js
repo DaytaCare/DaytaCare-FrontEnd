@@ -11,6 +11,12 @@ function DaycareCards(props) {
     <Card style={{ width: '32rem' }}>
       <Card.Body>
         <Card.Title>{daycare.name}</Card.Title>
+        <Card.Text>
+          <ul>{daycare.streetAddress}</ul>
+          <ul>{daycare.city}</ul>
+          <ul>{daycare.state}</ul>
+          <ul>{daycare.phone}</ul>
+        </Card.Text>
         </Card.Body> 
     </Card>
   )
