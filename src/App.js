@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav } from 'react-bootstrap';
-import AboutUs from './components/AboutUs.js';
+import AboutUs from './components/AboutUs/AboutUs.js';
 import './App.css';
 import {
   BrowserRouter as Router,
