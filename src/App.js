@@ -8,10 +8,10 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import Home from './Components2/Home/Home'
-import AboutUs from './Components2/AboutUs/AboutUs.js';
-import DaycareSearch from './Components2/DaycareSearch';
-import Footer from './Components2/Home/Footer';
+import Home from './Components/Home/Home'
+import AboutUs from './Components/AboutUs/AboutUs.js';
+import DaycareSearch from './Components/DaycareSearch';
+import Footer from './Components/Home/Footer';
 
 
 class App extends React.Component {
