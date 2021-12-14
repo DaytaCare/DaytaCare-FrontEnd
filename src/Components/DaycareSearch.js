@@ -9,13 +9,13 @@ const daytaCareApiAmenities = 'https://daytacare.azurewebsites.net/api/amenity';
 function DaycareSearch() {
 
   const [params, setParams] = useState({});
-  const { data: daycares } = useFetch(daytaCareApi, params);
+  const { data: daycares, reload: reloadDaycares } = useFetch(daytaCareApi, params, true);
   const { data: amenities } = useFetch(daytaCareApiAmenities);
 
-  if (!daycares) {
+  // if (!daycares) {
 
-    return (<Spinner animation="grow" variant="danger" />);
-  }
+  //   return (<Spinner animation="grow" variant="danger" />);
+  // }
 
   if (!amenities) {
     return (<Spinner animation="grow" variant="primary" />);
@@ -29,16 +29,24 @@ function DaycareSearch() {
     const formData = {
       city: city.value,
       state: state.value,
-      availability: availability.checked,
-      amenityId: 0 | amenityId.value
-    };
+    }
+
+    if (availability.checked)
+      formData.availability = true;
+
+    let amenityIdValue = 0 | amenityId.value;
+    if (amenityIdValue)
+      formData.amenityId = amenityIdValue;
 
     setParams(formData);
+    reloadDaycares();
 
     console.log(formData);
 
     city.focus();
   }
+
+
 
   return (
     <>
@@ -90,7 +98,7 @@ function DaycareSearch() {
       </Card>
 
       <Row>
-        {daycares.map(daycare => (
+        {daycares && daycares.map(daycare => (
           <Col key={daycare.daycareId}>
             <DaycareCards daycare={daycare} />
           </Col>

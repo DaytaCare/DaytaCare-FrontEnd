@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 
-export default function useFetch(url) {
+export default function useFetch(url, params, skipInitialFetch) {
 
   const [loading, setLoading] = useState(true);
-  const [shouldFetch, setShouldFetch] = useState(true);
+  const [shouldFetch, setShouldFetch] = useState(!skipInitialFetch);
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -12,8 +12,10 @@ export default function useFetch(url) {
     async function fetchData() {
 
       try {
+        let fullUrl = new URL(url)
+        fullUrl.search = new URLSearchParams(params)
 
-        let response = await fetch(url);
+        let response = await fetch(fullUrl);
         let body = await response.json();
 
         setData(body);
@@ -25,7 +27,7 @@ export default function useFetch(url) {
 
     setShouldFetch(false);
     fetchData();
-  }, [url, shouldFetch])
+  }, [url, shouldFetch, params])
 
   return useMemo(() => ({
     data,
