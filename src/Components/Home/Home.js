@@ -12,6 +12,7 @@ function Home() {
       </div>
 
       <div>
+        <h5>Featured Daycares</h5>
         <FeaturedDaycare/>
       </div>
     </div>
