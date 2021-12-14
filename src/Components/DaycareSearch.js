@@ -4,14 +4,21 @@ import DaycareCards from './DaycareCards';
 import useFetch from '../Components/Hooks/useFetch';
 
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/parents/search';
+const daytaCareApiAmenities = 'https://daytacare.azurewebsites.net/api/amenity';
 
 function DaycareSearch() {
 
   const [params, setParams] = useState({});
-  const { daycares } = useFetch(daytaCareApi, params);
+  const { data: daycares, reload: reloadDaycares } = useFetch(daytaCareApi, params, true);
+  const { data: amenities } = useFetch(daytaCareApiAmenities);
 
-  if (!daycares) {
-    return (<Spinner animation="grow" variant="danger" />);
+  // if (!daycares) {
+
+  //   return (<Spinner animation="grow" variant="danger" />);
+  // }
+
+  if (!amenities) {
+    return (<Spinner animation="grow" variant="primary" />);
   }
 
   function handleSubmit(event) {
@@ -22,17 +29,22 @@ function DaycareSearch() {
     const formData = {
       city: city.value,
       state: state.value,
-      availability: availability.checked,
-      amenityId: 0|amenityId.value
-    };
+    }
+
+    if (availability.checked)
+      formData.availability = true;
+
+    let amenityIdValue = 0 | amenityId.value;
+    if (amenityIdValue)
+      formData.amenityId = amenityIdValue;
 
     setParams(formData);
+    reloadDaycares();
 
     console.log(formData);
 
     city.focus();
   }
-
 
   return (
     <>
@@ -69,40 +81,13 @@ function DaycareSearch() {
                   label="All"
                   name="amenityId"
                   value="" />
-                <Form.Check
-                  type="radio"
-                  label="Parking"
-                  name="amenityId" 
-                  value="1" />
-                <Form.Check
-                  type="radio"
-                  label="Indoor Playground"
-                  name="amenityId"
-                  value="2" />
-                <Form.Check
-                  type="radio"
-                  label="Pay Scaling"
-                  name="amenityId" />
-                <Form.Check
-                  type="radio"
-                  label="Shuttle Transportation"
-                  name="amenityId" />
-                <Form.Check
-                  type="radio"
-                  label="Security"
-                  name="amenityId" />
-                <Form.Check
-                  type="radio"
-                  label="Wheelchair Accessible"
-                  name="amenityId" />
-                <Form.Check
-                  type="radio"
-                  label="Education"
-                  name="amenityId" />
-                <Form.Check
-                  type="radio"
-                  label="Meal Plan"
-                  name="amenityId" />
+                {amenities.map(amenity => (
+                  <Form.Check key={amenity.id}
+                    type="radio"
+                    label={amenity.name}
+                    name="amenityId"
+                    value={amenity.id} />
+                ))}
               </Col>
             </Form.Group>
             <Button variant="secondary" type="submit">Submit</Button>
@@ -111,7 +96,7 @@ function DaycareSearch() {
       </Card>
 
       <Row>
-        {daycares.map(daycare => (
+        {daycares && daycares.map(daycare => (
           <Col key={daycare.daycareId}>
             <DaycareCards daycare={daycare} />
           </Col>

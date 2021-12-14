@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
 import useAuth from "./useAuth";
 
-export default function useFetch(url) {
+export default function useFetch(url, params, skipInitialFetch) {
 
   const [loading, setLoading] = useState(true);
-  const [shouldFetch, setShouldFetch] = useState(true);
-  const [daycares, setDaycares] = useState(null);
+
+  const [shouldFetch, setShouldFetch] = useState(!skipInitialFetch);
+  const [data, setData] = useState(null);
   const { user } = useAuth();
 
   useEffect(() => {
@@ -14,15 +15,18 @@ export default function useFetch(url) {
     async function fetchData() {
 
       try {
+        let fullUrl = new URL(url)
+        fullUrl.search = new URLSearchParams(params)
 
-        let response = await fetch(url, {
+        let response = await fetch(fullUrl, {
           headers: {
-              'Authorization': user?`Bearer ${user.token}` : null
+            'Authorization': user ? `Bearer ${user.token}` : null
           }
         });
+
         let body = await response.json();
 
-        setDaycares(body);
+        setData(body);
         setLoading(false);
       }
 
@@ -31,12 +35,15 @@ export default function useFetch(url) {
 
     setShouldFetch(false);
     fetchData();
-  }, [url, user, shouldFetch])
+
+  }, [url, user, shouldFetch, params])
 
   return useMemo(() => ({
-    daycares,
+    data,
+
     isLoading: loading,
-    setDaycares,
+    setData,
+
     reload: () => setShouldFetch(true),
-  }), [daycares, loading]);
+  }), [data, loading]);
 }
