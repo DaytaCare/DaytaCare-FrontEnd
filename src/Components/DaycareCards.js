@@ -5,7 +5,6 @@ function DaycareCards(props) {
 
   const { daycare } = props;
 
-
   function showModal() {
 
   }
