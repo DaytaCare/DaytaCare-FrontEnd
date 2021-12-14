@@ -29,7 +29,7 @@ function DaycareSearch() {
     setParams(formData);
 
     console.log(formData);
-    
+
     city.focus();
   }
 
@@ -64,6 +64,11 @@ function DaycareSearch() {
             <Form.Group as={Row} className="mb-3">
               <Form.Label as="legend" column sm={2}>Amenities</Form.Label>
               <Col sm={10}>
+                <Form.Check
+                  type="radio"
+                  label="All"
+                  name="amenityId"
+                  value="" />
                 <Form.Check
                   type="radio"
                   label="Parking"
