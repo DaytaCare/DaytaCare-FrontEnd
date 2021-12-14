@@ -29,8 +29,7 @@ function DaycareSearch() {
     setParams(formData);
 
     console.log(formData);
-
-    //form.reset();
+    
     city.focus();
   }
 
