@@ -1,11 +1,19 @@
+import './css/Home.css';
+import './css/FeaturedDaycare.css'
 import FeaturedDaycare from "./FeaturedDaycare";
 
 function Home() {
   return(
     <>
-    <div>
-      <h1>Home</h1>
-      <FeaturedDaycare/>
+    <div className="home">
+      <div className= "about">
+        <h4>About DaytaCare</h4>
+        <img className="aboutImg" src="https://via.placeholder.com/550x300" alt="placeholder"/>
+      </div>
+
+      <div>
+        <FeaturedDaycare/>
+      </div>
     </div>
     </>
   )
