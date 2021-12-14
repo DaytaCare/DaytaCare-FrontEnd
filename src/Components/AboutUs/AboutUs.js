@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Row, Col, Container } from 'react-bootstrap';
-import yvette from './Images/Yvette.jpeg';
+import yvette1 from './Images/Yvette1.jpeg';
 import jaren from './Images/Jaren.jpeg';
 import ian from './Images/Ian.jpeg';
 import misti from './Images/Misti.jpeg';
@@ -17,7 +17,7 @@ class AboutUs extends React.Component {
         <Row>
           <Col>
             <Card style={{ width: '260px' }} >
-              <Card.Img variant="top" width="300px" height="180px" src={yvette} alt="yvette" />
+              <Card.Img variant="top" width="300px" height="180px" src={yvette1} alt="yvette" />
               <Card.Body>
                 <Card.Title>Yvette</Card.Title>
                 <Card.Text style={{ fontSize: '15px' }} className="scroll" >I have an MBA in Finance, over 15 years of leadership and management experience. I am an expert change leader specializing in identifying efficiencies, improving employee engagement, standardizing processes, communication, analysis, development, and measurement of key performance metrics.
@@ -26,15 +26,15 @@ class AboutUs extends React.Component {
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
+              <small>
                 <img src={email} className="me-2" height="15px" width="15px" alt="email"/>
-                  <small>
-                  ymclapp@yahoo.com
+                  <a href="mailto:ymclapp@yahoo.com">ymclapp@yahoo.com</a>
                   <br/>
                   <img src={github} className="me-2" height="15px" width="15px" alt="github"/>
-                  ymclapp
+                  <a href="https://github.com/ymclapp">ymclapp</a>
                   <br/>
                   <img src={linkedin} className="me-2" height="15px" width="15px" alt="linkedin"/>
-                  yvetteclapp
+                  <a href="https://www.linkedin.com/in/yvetteclapp/">yvetteclapp</a>
                   </small>
                   </Card.Footer>
             </Card>
@@ -50,15 +50,15 @@ class AboutUs extends React.Component {
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
+              <small>
                 <img src={email} className="me-2" height="15px" width="15px" alt="email"/>
-                  <small>
-                  ianwhitmor@gmail.com
+                  <a href="mailto:ianwhitmor@gmail.com">ianwhitmor@gmail.com</a>
                   <br/>
                   <img src={github} className="me-2" height="15px" width="15px" alt="github"/>
-                  iwhitmor
+                  <a href="https://github.com/iwhitmor">iwhitmor</a>
                   <br/>
                   <img src={linkedin} className="me-2" height="15px" width="15px" alt="linkedin"/>
-                  ianwhitmor
+                  <a href="https://www.linkedin.com/in/ianwhitmor/">ianwhitmor</a>
                   </small>
                 </Card.Footer>
             </Card>
@@ -74,15 +74,15 @@ class AboutUs extends React.Component {
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
-                <img src={email} className="me-2" height="15px" width="15px" alt="email"/>
-                  <small>
-                  mistidinzy@gmail.com
+              <small>
+                <img src={email} className="me-2" height="15px" width="15px" alt="email"/>                
+                  <a href="mailto:mistidinzy@gmail.com">mistidinzy@gmail.com</a>
                   <br/>
                   <img src={github} className="me-2" height="15px" width="15px" alt="github"/>
-                  mistidinzy
+                  <a href="https://github.com/mistidinzy">mistidinzy</a>
                   <br/>
                   <img src={linkedin} className="me-2" height="15px" width="15px" alt="linkedin"/>
-                  mistidinzy
+                  <a href="https://www.linkedin.com/in/mistidinzy/">mistidinzy</a>
                   </small>
                   </Card.Footer>
             </Card>
@@ -96,14 +96,15 @@ class AboutUs extends React.Component {
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
-                  <img src={email} className="me-2" height="15px" width="15px" alt="email"/>
-                  <small>schnoebee@gmail.com
+                  <small>
+                    <img src={email} className="me-2" height="15px" width="15px" alt="email"/>
+                    <a href="mailto:jarenschnoebelen@yahoo.com">jarenschnoebelen@yahoo.com</a>
                     <br/>
                     <img src={github} className="me-2" height="15px" width="15px" alt="github"/>
-                    JSchnoebe
+                    <a href="https://github.com/JSchnoebe">JSchnoebe</a>
                     <br/>
                     <img src={linkedin} className="me-2" height="15px" width="15px" alt="linkedin"/>
-                    jarenschnoebelen
+                    <a href="https://www.linkedin.com/in/jarenschnoebelen/">jarenschnoebelen</a>
                   </small>
                 </Card.Footer>
             </Card>
