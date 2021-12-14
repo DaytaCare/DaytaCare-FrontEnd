@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Spinner, Container, Row, Col } from 'react-bootstrap';
+import { Spinner, Container, Row, Col, Form } from 'react-bootstrap';
 import DaycareCards from './DaycareCards';
 import useFetch from '../Components/Hooks/useFetch';
 
@@ -16,6 +16,15 @@ function DaycareSearch() {
 
   return (
     <Container>
+      <Form>
+        <Form.Group>
+          <Form.Label>City</Form.Label>
+          <Form.Control type="text" placeholder="City" />
+          <Form.Label>State</Form.Label>
+          <Form.Control type="text" placeholder="State" />
+          
+        </Form.Group>
+      </Form>
       <Row>
         {daycares.map(daycare => (
           <Col>
