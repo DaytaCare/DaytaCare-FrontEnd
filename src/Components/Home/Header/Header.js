@@ -4,11 +4,10 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import './Header.css';
 
-function Header()
-{
+function Header() {
   const { user, logout } = useAuth();
 
-  return(
+  return (
     <>
     <div>
       <Navbar>
@@ -26,6 +25,7 @@ function Header()
         <Nav.Link as={Link} to="/">Home</Nav.Link>
         <Nav.Link as={Link} to="/AboutUs">About Us</Nav.Link>
         <Nav.Link as={Link} to="/DaycareSearch">Find a Daycare</Nav.Link>
+        <Nav.Link as={Link} to="/DaycareDashboard">Daycare Dashboard</Nav.Link>
         {!user && <Nav.Link as={Link} to='/Login'>Login</Nav.Link>}
         {user &&
           <>
