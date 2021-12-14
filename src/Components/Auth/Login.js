@@ -16,7 +16,7 @@ export default function Login() {
         console.log(loginData);
 
         login(loginData);
-        form.rest();
+        form.reset();
     }
 
     return (
