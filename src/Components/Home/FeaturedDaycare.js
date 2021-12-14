@@ -1,5 +1,5 @@
 import './css/FeaturedDaycare.css'
-import {Row, Col, Card, ListGroup, ListGroupItem} from 'react-bootstrap'
+import {Row, Col, Card, Button, ListGroup, ListGroupItem} from 'react-bootstrap'
 
 function FeaturedDaycare() {
 
@@ -9,7 +9,7 @@ function FeaturedDaycare() {
       <Row xs='auto' md='auto' className="g-4">
           <Col>
             <Card style={{ width: '260px' }}>
-              <Card.Header className="card-header" style={{ textAlign: 'center' }} >Teddy Bear Child Care Center Inc.</Card.Header>
+              <Card.Header className="card-header">Teddy Bear Child Care Center, Inc.</Card.Header>
               <Card.Img variant="top" src="https://via.placeholder.com/250x250" />
                 <Card.Body>
                   <Card.Text>
@@ -22,13 +22,12 @@ function FeaturedDaycare() {
                   </Card.Text>
                 </Card.Body>
                   <ListGroup className="list-group-flush">
-                    <ListGroupItem>Daycare Type</ListGroupItem>
-                    <ListGroupItem>$$ (Price Range)</ListGroupItem>
-                    <ListGroupItem>Availability?</ListGroupItem>
+                    <ListGroupItem>Daycare Type: Center</ListGroupItem>
+                    <ListGroupItem>Availability: Yes</ListGroupItem>
+                    <ListGroupItem>(319)365-6534</ListGroupItem>
                   </ListGroup>
                 <Card.Body>
-                  <Card.Link href="#">Website</Card.Link>
-                  <Card.Link href="#">Contact</Card.Link>
+                  <Button href="#">Website</Button>
                 </Card.Body>
             </Card>
           </Col>
@@ -47,14 +46,13 @@ function FeaturedDaycare() {
                     </ul>
                   </Card.Text>
                 </Card.Body>
-                  <ListGroup className="list-group-flush">
-                    <ListGroupItem>Daycare Type</ListGroupItem>
-                    <ListGroupItem>$$ (Price Range)</ListGroupItem>
-                    <ListGroupItem>Availability?</ListGroupItem>
+                <ListGroup className="list-group-flush">
+                    <ListGroupItem>Daycare Type: Center</ListGroupItem>
+                    <ListGroupItem>Availability: Yes</ListGroupItem>
+                    <ListGroupItem>(319)555-5555</ListGroupItem>
                   </ListGroup>
                 <Card.Body>
-                  <Card.Link href="#">Website</Card.Link>
-                  <Card.Link href="#">Contact</Card.Link>
+                  <Button href="#">Website</Button>
                 </Card.Body>
             </Card>
           </Col>
@@ -73,14 +71,13 @@ function FeaturedDaycare() {
                     </ul>
                   </Card.Text>
                 </Card.Body>
-                  <ListGroup className="list-group-flush">
-                    <ListGroupItem>Daycare Type</ListGroupItem>
-                    <ListGroupItem>$$ (Price Range)</ListGroupItem>
-                    <ListGroupItem>Availability?</ListGroupItem>
+                <ListGroup className="list-group-flush">
+                    <ListGroupItem>Daycare Type: Center</ListGroupItem>
+                    <ListGroupItem>Availability: Yes</ListGroupItem>
+                    <ListGroupItem>(319)555-5555</ListGroupItem>
                   </ListGroup>
                 <Card.Body>
-                  <Card.Link href="#">Website</Card.Link>
-                  <Card.Link href="#">Contact</Card.Link>
+                  <Button href="#">Website</Button>
                 </Card.Body>
             </Card>
           </Col>

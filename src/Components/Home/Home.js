@@ -5,7 +5,7 @@ import FeaturedDaycare from "./FeaturedDaycare";
 function Home() {
   return(
     <>
-    <div>
+    <div className="home">
       <div className= "about">
         <h4>About DaytaCare</h4>
         <img className="aboutImg" src="https://via.placeholder.com/550x300" alt="placeholder"/>

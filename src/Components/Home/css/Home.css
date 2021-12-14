@@ -3,8 +3,9 @@
   src: url('Roklien.ttf');
 }
 
-* {
-  box-sizing: border-box;
+.home{
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 h1{
@@ -23,8 +24,9 @@ h4{
 
 .aboutImg {
   display: block;
-  margin: 10px;
+  margin-top: 10px;
   margin-right: auto;
   margin-bottom: 10px;
   margin-left: auto;
+  border-radius: 10px;
 }

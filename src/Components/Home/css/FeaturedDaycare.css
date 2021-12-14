@@ -1,15 +1,10 @@
-.featuredDaycares{
-  width:100%;
-  background-color: #DBDBDB;
-}
-
 .card-header{
-  padding-top: 5px;
  text-align: center;
 }
 
 .g-4{
+  /* background-color: #DBDBDB; */
   width: 45%;
-  margin-left:auto;
   margin-right: auto;
+  margin-left: auto;
 }
