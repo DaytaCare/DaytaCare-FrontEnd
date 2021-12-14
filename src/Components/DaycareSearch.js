@@ -80,7 +80,7 @@ function DaycareSearch() {
                     type="radio"
                     label={amenity.name}
                     name="amenityId"
-                    value="" />
+                    value={amenity.id} />
                 ))}
               </Col>
             </Form.Group>
