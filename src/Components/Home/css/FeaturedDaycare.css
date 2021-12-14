@@ -1,0 +1,10 @@
+.card-header{
+ text-align: center;
+}
+
+.g-4{
+  /* background-color: #DBDBDB; */
+  width: 45%;
+  margin-right: auto;
+  margin-left: auto;
+}

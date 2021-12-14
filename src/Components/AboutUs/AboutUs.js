@@ -68,14 +68,14 @@ class AboutUs extends React.Component {
               <Card.Img variant="top" width="300px" height="180px" src={misti} alt="misti" />
               <Card.Body>
                 <Card.Title>Misti</Card.Title>
-                <Card.Text style={{ fontSize: '15px' }} className="scroll" >Misti is an aspiring software developer and digital artist. She is passionate about volunteering and animal rescue. Misti lives with her fiance Dakota, their two dogs, two cats, chinchilla and their various foster dogs. 
-                She came to DeltaV Code School to gain the skills that will allow her to move into a fulfilling career, with a healthier work/life balance and remote work flexibility. 
+                <Card.Text style={{ fontSize: '15px' }} className="scroll" >Misti is an aspiring software developer and digital artist. She is passionate about volunteering and animal rescue. Misti lives with her fiance Dakota, their two dogs, two cats, chinchilla and their various foster dogs.
+                She came to DeltaV Code School to gain the skills that will allow her to move into a fulfilling career, with a healthier work/life balance and remote work flexibility.
                 She wants to be able to apply her analytical skills and determination in a way that creates a positive impact to her community.
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
               <small>
-                <img src={email} className="me-2" height="15px" width="15px" alt="email"/>                
+                <img src={email} className="me-2" height="15px" width="15px" alt="email"/>
                   <a href="mailto:mistidinzy@gmail.com">mistidinzy@gmail.com</a>
                   <br/>
                   <img src={github} className="me-2" height="15px" width="15px" alt="github"/>
