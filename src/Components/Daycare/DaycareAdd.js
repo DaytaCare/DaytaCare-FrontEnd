@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container } from 'react-bootstrap'
+import { Button, Form } from 'react-bootstrap'
 import useAuth from '../Hooks/useAuth'
 //import useFetch from '../Hooks/useFetch'
 
@@ -67,85 +67,67 @@ async function handleDaycareAdd(event) {
 //let canCreate = hasPermission('create');
 
 return (
-    <div className="row">
-      <div className="col-md-6">
-        <div className="card border-dark mb-3">
-          <Container>
-            <form onSubmit={ handleDaycareAdd }>
-              <legend>Add My Daycare</legend>
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="daycareType">Daycare Type</label>
-                  <input type="text" className="form-control" id="daycareType" placeholder="Select Daycare Type" name="daycareType" value={daycareType} onChange={e => setDaycareType(parseInt(e.target.value))} />
-                </div>
-              </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="name">Daycare Name</label>
-                  <input type="text" className="form-control" id="name" placeholder="Enter Daycare Name" name="name" value={name} onChange={e => setName(e.target.value)} />
-                </div>
-              </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="streetAddress">Daycare Address</label>
-                  <input type="text" className="form-control" id="streetAddress" placeholder="Enter Street Address" name="streetAddress" value={streetAddress} onChange={e => setStreetAddress(e.target.value)} />
-                </div>
-              </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="city">Daycare City</label>
-                  <input type="text" className="form-control" id="city" placeholder="Enter Daycare City" name="city" value={city} onChange={e => setCity(e.target.value)} />
-                </div>
-              </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="state">Daycare State</label>
-                  <input type="text" className="form-control" id="state" placeholder="Enter Daycare State" name="state" value={state} onChange={e => setState(e.target.value)} />
-                </div>
-              </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="country">Daycare Country</label>
-                  <input type="text" className="form-control" id="country" placeholder="Enter Daycare Country" name="country" value={country} onChange={e => setCountry(e.target.value)} />
-                </div>
-              </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="phone">Daycare Phone Number</label>
-                  <input type="text" className="form-control" id="phone" placeholder="Enter the Daycare Phone Number" name="phone" value={phone} onChange={e => setPhone(e.target.value)} />
-                </div>
-              </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="email">Daycare Email</label>
-                  <input type="text" className="form-control" id="email" placeholder="Enter Email" name="email" value={email} onChange={e => setEmail(e.target.value)} />
-                </div>
-              </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="price">Daycare Price</label>
-                  <input type="text" className="form-control" id="price" placeholder="Enter Price" name="price" value={price} onChange={e => setPrice(parseInt(e.target.value))} />
-                </div>
-              </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="licenseNumber">State of Iowa Daycare License Number</label>
-                  <input type="text" className="form-control" id="licenseNumber" placeholder="Enter License Number" name="licenseNumber" value={licenseNumber} onChange={e => setLicenseNumber(e.target.value)} />
-                </div>
-              </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="availability">Daycare Has Availability?</label>
-                  <input type="text" className="form-control" id="availability" name="availability" value={ availability }  onChange={e => setAvailability(e.target.value)} />
-                </div>
-              </div>
-              {/*<button type="submit" disabled={!canCreate} className="btn btn-primary">Submit</button>*/}
-              <button type="submit" className="btn btn-primary">Submit</button>
-            </form>
-          </Container>
-        </div>
-      </div>
-    </div>
+      <Form onSubmit={ handleDaycareAdd } title="Add My Daycare">
+        <Form.Group className="mb-3" controlId="form.daycareType">
+          <Form.Label>Daycare Type</Form.Label>
+          <Form.Control type="text" placeholder="Select Daycare Type" value={daycareType} onChange={e => setDaycareType(parseInt(e.target.value))}/>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="form.daycareName">
+          <Form.Label>Daycare Name</Form.Label>
+          <Form.Control type="text" placeholder="Enter Daycare Name" value={name} onChange={e => setName(e.target.value)}/>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="form.streetAddress">
+          <Form.Label>Daycare Street Address</Form.Label>
+          <Form.Control type="text" placeholder="Enter Daycare Street Address" value={streetAddress} onChange={e => setStreetAddress(e.target.value)}/>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="form.city">
+          <Form.Label>Daycare City</Form.Label>
+          <Form.Control type="text" placeholder="Enter Daycare City" value={city} onChange={e => setCity(e.target.value)}/>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="form.state">
+          <Form.Label>Daycare State</Form.Label>
+          <Form.Control type="text" placeholder="Enter Daycare State" value={state} onChange={e => setState(e.target.value)}/>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="form.country">
+          <Form.Label>Daycare Country</Form.Label>
+          <Form.Control type="text" placeholder="Enter Daycare Country" value={country} onChange={e => setCountry(e.target.value)}/>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="form.phone">
+          <Form.Label>Daycare Phone Number</Form.Label>
+          <Form.Control type="text" placeholder="Enter Daycare Phone" value={phone} onChange={e => setPhone(e.target.value)}/>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="form.email">
+          <Form.Label>Daycare Email Address</Form.Label>
+          <Form.Control type="email" placeholder="Enter Daycare Email Address" value={email} onChange={e => setEmail(e.target.value)}/>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="form.price">
+          <Form.Label>Rate</Form.Label>
+          <Form.Control type="text" placeholder="Enter the Daycare Rate" value={price} onChange={e => setPrice(parseInt(e.target.value))}/>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="form.licenseNumber">
+          <Form.Label>State of Iowa License Number</Form.Label>
+          <Form.Control type="text" placeholder="Enter the Daycare's License Number" value={licenseNumber} onChange={e => setLicenseNumber(e.target.value)}/>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="form.availability">
+          <Form.Label>Has Availability?</Form.Label>
+          <Form.Check
+            type="checkbox"
+            name="availability"
+            value="true" />
+        </Form.Group>
+        
+        <Button variant="primary" type="submit">Submit</Button>
+      </Form>
 )
 
 }
