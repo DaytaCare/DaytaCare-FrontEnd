@@ -1,28 +1,48 @@
-import React, { useState, PhoneInput } from 'react'
+import React, { useState } from 'react'
 import { Container } from 'react-bootstrap'
-import useAuth from '../../Hooks/useAuth'
-import useFetch from '../../Hooks/useFetch'
+import useAuth from '../Hooks/useAuth'
+//import useFetch from '../Hooks/useFetch'
 
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/daycares';
 
-export default function DaycareAdd(daycare) {
-    const { reload } = useFetch(daytaCareApi);
+export default function DaycareAdd(props) {
+    //const { reload } = useFetch(daytaCareApi);
     const { user } = useAuth();
-    const { hasPermission } = useAuth();
+    //const { hasPermission } = useAuth();
     const [daycareType, setDaycareType ] = useState('')
     const [name, setName ] = useState('')
     const [streetAddress, setStreetAddress ] = useState('')
     const [city, setCity ] = useState('')
-    const [state, setState ] = useState('')
-    const [country, setCountry ] = useState('')
-    const [phone, setPhone ] = useState('')
+    const [state, setState ] = useState('IA')
+    const [country, setCountry ] = useState('US')
+    const [phone, setPhone ] = useState('###-###-####')
     const [email, setEmail ] = useState('')
     const [price, setPrice ] = useState('')
     const [licenseNumber, setLicenseNumber ] = useState('')
-    const [availability, setAvailability ] = useState('true')
+    const [availability, setAvailability ] = useState(Boolean)
 
-async function handleDaycareAdd() {
-    console.log('Submitting...', daycare);
+async function handleDaycareAdd(event) {
+  event.preventDefault()
+    console.log('Submitting...', );
+
+    //const form = event.target;
+   // const { daycareType,name,streetAddress,city,state,country,phone,email,price,licenseNumber,availability } = form.elements;
+
+    //const formData = {
+    //  daycareType:  daycareType.value,
+    //  name:  name.value,
+    //  streetAddress:  streetAddress.value,
+    //  city:  city.value,
+    //  state:  state.value,
+    //  country:  country.value,
+   //   phone:  phone.value,
+    //  email:  email.value,
+    //  price:  price.value,
+    //  licenseNumber:  licenseNumber.value,
+    //  availability:  availability,
+    //};
+    //console.log(formData);
+
     if (!user) {
         console.warn('Anonymous should not be allowed to add!');
         return;
@@ -30,14 +50,21 @@ async function handleDaycareAdd() {
 
     await fetch(`${daytaCareApi}`, {
         method:  'post',
+        body: JSON.stringify({ daycareType,name,streetAddress,city,state,country,phone,email,price,licenseNumber,availability }),
         headers: {
-            'Authorization': `Bearer ${user.token}` 
-        }
+            'Authorization': `Bearer ${user.token}`,
+            'Content-Type' : 'application/json',
+        },
+        //body: JSON.stringify({ daycareType,name,streetAddress,city,state,country,phone,email,price,licenseNumber,availability }),
+
     })
-    reload();
+    //reload();
+    //console.log('Submitted successfully', formData);
+    console.log('Submitted successfully');
+    //form.reset();
 }
 
-let canCreate = hasPermission('create');
+//let canCreate = hasPermission('create');
 
 return (
     <div className="row">
@@ -49,7 +76,7 @@ return (
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="daycareType">Daycare Type</label>
-                  <input type="text" className="form-control" id="daycareType" placeholder="Select Daycare Type" name="daycareType" value={daycareType} onChange={e => setDaycareType(e.target.value)} />
+                  <input type="text" className="form-control" id="daycareType" placeholder="Select Daycare Type" name="daycareType" value={daycareType} onChange={e => setDaycareType(parseInt(e.target.value))} />
                 </div>
               </div>
               <div className="form-row">
@@ -85,7 +112,7 @@ return (
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="phone">Daycare Phone Number</label>
-                  <PhoneInput className="form-control" id="phone" placeholder="Enter the Daycare Phone Number" name="phone" value={phone} onChange={e => setPhone(e.target.value)} />
+                  <input type="text" className="form-control" id="phone" placeholder="Enter the Daycare Phone Number" name="phone" value={phone} onChange={e => setPhone(e.target.value)} />
                 </div>
               </div>
               <div className="form-row">
@@ -97,7 +124,7 @@ return (
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="price">Daycare Price</label>
-                  <input type="text" className="form-control" id="price" placeholder="Enter Price" name="price" value={price} onChange={e => setPrice(e.target.value)} />
+                  <input type="text" className="form-control" id="price" placeholder="Enter Price" name="price" value={price} onChange={e => setPrice(parseInt(e.target.value))} />
                 </div>
               </div>
               <div className="form-row">
@@ -109,10 +136,11 @@ return (
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="availability">Daycare Has Availability?</label>
-                  <input type="text" className="form-control" id="availability" placeholder="Enter True or False" name="availability" value={availability} onChange={e => setAvailability(e.target.value)} />
+                  <input type="text" className="form-control" id="availability" name="availability" value={ availability }  onChange={e => setAvailability(e.target.value)} />
                 </div>
               </div>
-              <button type="submit" disabled={!canCreate} className="btn btn-primary">Submit</button>
+              {/*<button type="submit" disabled={!canCreate} className="btn btn-primary">Submit</button>*/}
+              <button type="submit" className="btn btn-primary">Submit</button>
             </form>
           </Container>
         </div>

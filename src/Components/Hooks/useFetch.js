@@ -31,7 +31,7 @@ export default function useFetch(url) {
 
     setShouldFetch(false);
     fetchData();
-  }, [url, shouldFetch])
+  }, [url, user, shouldFetch])
 
   return useMemo(() => ({
     daycares,
