@@ -4,14 +4,21 @@ import DaycareCards from './DaycareCards';
 import useFetch from '../Components/Hooks/useFetch';
 
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/parents/search';
+const daytaCareApiAmenities ='https://daytacare.azurewebsites.net/api/amenity';
 
 function DaycareSearch() {
 
   const [params, setParams] = useState({});
-  const { daycares } = useFetch(daytaCareApi, params);
+  const { daycares } = useFetch(daytaCareApi);
+  const { amenities } = useFetch(daytaCareApiAmenities, params);
+  
 
   if (!daycares) {
     return (<Spinner animation="grow" variant="danger" />);
+  }
+
+  if (!amenities) {
+    return (<Spinner animation="grow" variant="primary" />);
   }
 
   function handleSubmit(event) {
@@ -117,6 +124,13 @@ function DaycareSearch() {
           </Col>
         ))}
       </Row>
+      <div>
+        {amenities.map(amenity => (
+          <ul key={amenity.id}>
+            {amenity.name}
+          </ul>
+        ))}
+      </div>
     </>
   )
 }
