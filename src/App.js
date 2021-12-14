@@ -13,11 +13,11 @@ import AboutUs from './Components/AboutUs/AboutUs.js';
 import DaycareSearch from './Components/DaycareSearch';
 import Footer from './Components/Home/Footer';
 import Login from './Components/Auth/Login';
+import useAuth from '../src/Components/Hooks/useAuth';
 
 
-class App extends React.Component {
-
-  render() {
+function App() {
+  const { user, logout } = useAuth();
 
     return (
       <>
@@ -27,6 +27,13 @@ class App extends React.Component {
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/AboutUs">About Us</Nav.Link>
             <Nav.Link as={Link} to="/DaycareSearch">Find a Daycare</Nav.Link>
+            {!user && <Nav.Link as={Link} to='/Login'>Login</Nav.Link>}
+            {user &&
+            <>
+            Welcome back, {user.username}
+            <button onClick={() => logout()}>Log Out</button>
+            </>
+            }
           </Navbar>
           <Switch>
             <Route exact path="/">
@@ -51,7 +58,5 @@ class App extends React.Component {
     );
   }
 
-
-}
 
 export default App;
