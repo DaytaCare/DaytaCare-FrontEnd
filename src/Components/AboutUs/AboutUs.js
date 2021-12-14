@@ -43,8 +43,8 @@ class AboutUs extends React.Component {
               <Card.Img variant="top" width="300px" height="180px" src={misti} alt="misti" />
               <Card.Body>
                 <Card.Title>Misti</Card.Title>
-                <Card.Text style={{ fontSize: '15px' }} className="scroll" >Misti is an aspiring software developer and digital artist. She is passionate about volunteering and animal rescue. Misti lives with her fiance Dakota, their two dogs, two cats, chinchilla and their various foster dogs. 
-                She came to Delta V Code School to gain the skills that will allow her to move into a fulfilling career, with a healthier work/life balance and remote work flexibility. 
+                <Card.Text style={{ fontSize: '15px' }} className="scroll" >Misti is an aspiring software developer and digital artist. She is passionate about volunteering and animal rescue. Misti lives with her fiance Dakota, their two dogs, two cats, chinchilla and their various foster dogs.
+                She came to Delta V Code School to gain the skills that will allow her to move into a fulfilling career, with a healthier work/life balance and remote work flexibility.
                 She wants to be able to apply her analytical skills and determination in a way that creates a positive impact to her community.
                 </Card.Text>
                 <Card.Link href="https://www.yahoo.com/ymclapp">My Email</Card.Link>
