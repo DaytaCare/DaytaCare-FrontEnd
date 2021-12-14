@@ -23,9 +23,9 @@ function App() {
 
     return (
       <>
-          <Router>
+        <Router>
           <Navbar>
-          <Navbar.Brand href="#">DaytaCare</Navbar.Brand>
+            <Navbar.Brand href="#">DaytaCare</Navbar.Brand>
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/AboutUs">About Us</Nav.Link>
             <Nav.Link as={Link} to="/DaycareSearch">Find a Daycare</Nav.Link>
@@ -40,10 +40,10 @@ function App() {
           </Navbar>
           <Switch>
             <Route exact path="/">
-              <Home/>
+              <Home />
             </Route>
             <Route path="/AboutUs">
-            <h1>About Us</h1>
+              <h1>About Us</h1>
               <AboutUs />
             </Route>
             <Route path="/Login">
@@ -52,11 +52,14 @@ function App() {
           <Route path="/DaycareDashboard">
             <DaycareAdd />
           </Route>
+          <Route>
+              <Login />
+            </Route>
             <Route exact path="/DaycareSearch">
               <DaycareSearch />
             </Route>
           </Switch>
-          <Footer/>
+          <Footer />
         </Router>
 
       </>
