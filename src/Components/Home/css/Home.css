@@ -17,9 +17,13 @@ h4{
   font-family: 'RoklienRegular';
 }
 
-img {
+.about{
+  margin-bottom: 70px;
+}
+
+.aboutImg {
   display: block;
-  margin-top: 5px;
+  margin: 10px;
   margin-right: auto;
   margin-bottom: 10px;
   margin-left: auto;

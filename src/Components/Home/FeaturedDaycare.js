@@ -9,7 +9,7 @@ function FeaturedDaycare() {
       <Row xs='auto' md='auto' className="g-4">
           <Col>
             <Card style={{ width: '260px' }}>
-              <Card.Header style={{ textAlign: 'center', height: '5rem'}}>Teddy Bear Child Care Center Inc.</Card.Header>
+              <Card.Header className="card-header" style={{ textAlign: 'center' }} >Teddy Bear Child Care Center Inc.</Card.Header>
               <Card.Img variant="top" src="https://via.placeholder.com/250x250" />
                 <Card.Body>
                   <Card.Text>
@@ -35,7 +35,7 @@ function FeaturedDaycare() {
 
           <Col>
             <Card style={{ width: '260px' }}>
-              <Card.Header style={{ textAlign: 'center', height: '5rem'}}>Alice's Rainbow Child Care Center</Card.Header>
+              <Card.Header className="card-header">Alice's Rainbow Child Care Center</Card.Header>
               <Card.Img variant="top" src="https://via.placeholder.com/250x250" />
                 <Card.Body>
                   <Card.Text>
@@ -61,7 +61,7 @@ function FeaturedDaycare() {
 
           <Col>
             <Card style={{ width: '260px' }}>
-              <Card.Header style={{ textAlign: 'center', height: '5rem'}}>KidsPoint Downtown Learning Center & Preschool</Card.Header>
+              <Card.Header className="card-header">KidsPoint Downtown Learning Center & Preschool</Card.Header>
               <Card.Img variant="top" src="https://via.placeholder.com/250x250" />
                 <Card.Body>
                   <Card.Text>
