@@ -24,19 +24,19 @@ class AboutUs extends React.Component {
                 Besides attending Delta V, I enjoy volunteering my skills as a data and research analysis utilizing Power BI.
                 My goal is to continually improve myself and most recently to reinvent myself into a career in website coding where I can utilize my passions to the benefit of the customer.
                 </Card.Text>
-                <Card.Footer>
-                <img src={email} height="15px" width="15px" alt="email"/>
+              </Card.Body>
+              <Card.Footer>
+                <img src={email} className="me-2" height="15px" width="15px" alt="email"/>
                   <small>
                   ymclapp@yahoo.com
                   <br/>
-                  <img src={github} height="15px" width="15px" alt="github"/>
-                  github.com/ymclapp
+                  <img src={github} className="me-2" height="15px" width="15px" alt="github"/>
+                  ymclapp
                   <br/>
-                  <img src={linkedin} height="15px" width="15px" alt="linkedin"/>
-                  linkedin.com/in/yvetteclapp/
+                  <img src={linkedin} className="me-2" height="15px" width="15px" alt="linkedin"/>
+                  yvetteclapp
                   </small>
                   </Card.Footer>
-              </Card.Body>
             </Card>
           </Col>
           <Col>
@@ -48,19 +48,19 @@ class AboutUs extends React.Component {
                 After Delta V, Ian is looking forward to a new career in the tech industry. He is interested in full stack development as it allows him to tap into both his creative side and his problem-solving/analytical side.
                 Ian enjoys spending time with his family, especially his wife, Sarah, and his son, Wesley. He also loves food (BBQ), sports (golf), and traveling.
                 </Card.Text>
-                <Card.Footer>
-                <img src={email} height="15px" width="15px" alt="email"/>
+              </Card.Body>
+              <Card.Footer>
+                <img src={email} className="me-2" height="15px" width="15px" alt="email"/>
                   <small>
                   ianwhitmor@gmail.com
                   <br/>
-                  <img src={github} height="15px" width="15px" alt="github"/>
-                  github.com/iwhitmor
+                  <img src={github} className="me-2" height="15px" width="15px" alt="github"/>
+                  iwhitmor
                   <br/>
-                  <img src={linkedin} height="15px" width="15px" alt="linkedin"/>
-                  linkedin.com/in/ianwhitmor/
+                  <img src={linkedin} className="me-2" height="15px" width="15px" alt="linkedin"/>
+                  ianwhitmor
                   </small>
                 </Card.Footer>
-              </Card.Body>
             </Card>
           </Col>
           <Col>
@@ -72,19 +72,19 @@ class AboutUs extends React.Component {
                 She came to Delta V Code School to gain the skills that will allow her to move into a fulfilling career, with a healthier work/life balance and remote work flexibility. 
                 She wants to be able to apply her analytical skills and determination in a way that creates a positive impact to her community.
                 </Card.Text>
-                <Card.Footer>
-                <img src={email} height="15px" width="15px" alt="email"/>
+              </Card.Body>
+              <Card.Footer>
+                <img src={email} className="me-2" height="15px" width="15px" alt="email"/>
                   <small>
                   mistidinzy@gmail.com
                   <br/>
-                  <img src={github} height="15px" width="15px" alt="github"/>
-                  github.com/mistidinzy
+                  <img src={github} className="me-2" height="15px" width="15px" alt="github"/>
+                  mistidinzy
                   <br/>
-                  <img src={linkedin} height="15px" width="15px" alt="linkedin"/>
-                  linkedin.com/in/mistidinzy/
+                  <img src={linkedin} className="me-2" height="15px" width="15px" alt="linkedin"/>
+                  mistidinzy
                   </small>
                   </Card.Footer>
-              </Card.Body>
             </Card>
           </Col>
           <Col>
@@ -94,18 +94,18 @@ class AboutUs extends React.Component {
                 <Card.Title>Jaren</Card.Title>
                 <Card.Text style={{ fontSize: '15px' }} className="scroll" >Hello, my name is Jaren Schnoebelen. I am originally from Newhall, IA and moved to Cedar Rapids about 2 years ago with my now fiancé and our 1 year old daughter. I love music and sports. My favorite band is Pink Floyd, and my favorite sports team is the Chicago Cubs. I have been a student at Delta V Code School for about a year, and loving it so far. I chose to join Delta V because I enjoy creating/building new things and I love working with computers. My favorite thing about coding and web development is being able to work with a team to accomplish a set goal, and develop a working web page that could be used to solve a certain problem. I feel confident in my abilities, and very passionate about the field, and I believe I would make a great candidate for a web development position.
                 </Card.Text>
-                <Card.Footer>
-                  <img src={email} height="15px" width="15px" alt="email"/>
+              </Card.Body>
+              <Card.Footer>
+                  <img src={email} className="me-2" height="15px" width="15px" alt="email"/>
                   <small>schnoebee@gmail.com
                     <br/>
-                    <img src={github} height="15px" width="15px" alt="github"/>
-                    github.com/JSchnoebe
+                    <img src={github} className="me-2" height="15px" width="15px" alt="github"/>
+                    JSchnoebe
                     <br/>
-                    <img src={linkedin} height="15px" width="15px" alt="linkedin"/>
-                    linkedin.com/in/jarenschnoebelen/
+                    <img src={linkedin} className="me-2" height="15px" width="15px" alt="linkedin"/>
+                    jarenschnoebelen
                   </small>
                 </Card.Footer>
-              </Card.Body>
             </Card>
           </Col>
         </Row>
