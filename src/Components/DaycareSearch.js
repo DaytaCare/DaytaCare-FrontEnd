@@ -4,16 +4,16 @@ import DaycareCards from './DaycareCards';
 import useFetch from '../Components/Hooks/useFetch';
 
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/parents/search';
-const daytaCareApiAmenities ='https://daytacare.azurewebsites.net/api/amenity';
+const daytaCareApiAmenities = 'https://daytacare.azurewebsites.net/api/amenity';
 
 function DaycareSearch() {
 
   const [params, setParams] = useState({});
-  const { daycares } = useFetch(daytaCareApi);
-  const { amenities } = useFetch(daytaCareApiAmenities, params);
-  
+  const { data: daycares } = useFetch(daytaCareApi, params);
+  const { data: amenities } = useFetch(daytaCareApiAmenities);
 
   if (!daycares) {
+
     return (<Spinner animation="grow" variant="danger" />);
   }
 
@@ -30,7 +30,7 @@ function DaycareSearch() {
       city: city.value,
       state: state.value,
       availability: availability.checked,
-      amenityId: 0|amenityId.value
+      amenityId: 0 | amenityId.value
     };
 
     setParams(formData);
@@ -79,7 +79,7 @@ function DaycareSearch() {
                 <Form.Check
                   type="radio"
                   label="Parking"
-                  name="amenityId" 
+                  name="amenityId"
                   value="1" />
                 <Form.Check
                   type="radio"

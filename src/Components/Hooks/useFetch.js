@@ -4,8 +4,7 @@ export default function useFetch(url) {
 
   const [loading, setLoading] = useState(true);
   const [shouldFetch, setShouldFetch] = useState(true);
-  const [daycares, setDaycares] = useState(null);
-  const [amenities, setAmenities] = useState(null);
+  const [data, setData] = useState(null);
 
   useEffect(() => {
     if (!shouldFetch) return;
@@ -17,8 +16,7 @@ export default function useFetch(url) {
         let response = await fetch(url);
         let body = await response.json();
 
-        setDaycares(body);
-        setAmenities(body);
+        setData(body);
         setLoading(false);
       }
 
@@ -30,11 +28,11 @@ export default function useFetch(url) {
   }, [url, shouldFetch])
 
   return useMemo(() => ({
-    daycares,
-    amenities,
+    data,
+   
     isLoading: loading,
-    setDaycares,
-    setAmenities,
+    setData,
+
     reload: () => setShouldFetch(true),
-  }), [daycares, loading, amenities]);
+  }), [data, loading]);
 }
