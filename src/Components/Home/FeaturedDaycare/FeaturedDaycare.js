@@ -1,4 +1,4 @@
-import './css/FeaturedDaycare.css'
+import './FeaturedDaycare.css'
 import {Row, Col, Card, Button, ListGroup, ListGroupItem} from 'react-bootstrap'
 
 function FeaturedDaycare() {
@@ -6,7 +6,7 @@ function FeaturedDaycare() {
   return(
     <>
     <div className="featuredDaycares">
-      <Row xs='auto' md='auto' className="g-4">
+      <Row xs='auto' md='auto' lg='auto' className="g-4">
           <Col>
             <Card style={{ width: '260px' }}>
               <Card.Header className="card-header">Teddy Bear Child Care Center, Inc.</Card.Header>

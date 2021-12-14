@@ -1,6 +1,6 @@
 import './css/Home.css';
-import './css/FeaturedDaycare.css'
-import FeaturedDaycare from "./FeaturedDaycare";
+import './FeaturedDaycare/FeaturedDaycare.css'
+import FeaturedDaycare from "./FeaturedDaycare/FeaturedDaycare";
 
 function Home() {
   return(
@@ -12,6 +12,7 @@ function Home() {
       </div>
 
       <div>
+        <h5>Featured Daycares</h5>
         <FeaturedDaycare/>
       </div>
     </div>
