@@ -15,7 +15,7 @@ export default function DaycareAdd(props) {
     const [city, setCity ] = useState('')
     const [state, setState ] = useState('IA')
     const [country, setCountry ] = useState('US')
-    const [phone, setPhone ] = useState('###-###-####')
+    const [phone, setPhone ] = useState('')
     const [email, setEmail ] = useState('')
     const [price, setPrice ] = useState('')
     const [licenseNumber, setLicenseNumber ] = useState('')
