@@ -39,7 +39,6 @@ function DaycareSearch() {
     city.focus();
   }
 
-
   return (
     <>
       <Card className="mt-4" style={{ width: '40rem' }}>
