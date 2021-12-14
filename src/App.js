@@ -14,6 +14,8 @@ import DaycareSearch from './Components/DaycareSearch';
 import Footer from './Components/Home/Footer';
 import Login from './Components/Auth/Login';
 import useAuth from '../src/Components/Hooks/useAuth';
+import DaycareAdd from './Components/Daycare/DaycareAdd';
+
 
 
 function App() {
@@ -32,6 +34,7 @@ function App() {
             <>
             Welcome back, {user.username}
             <button onClick={() => logout()}>Log Out</button>
+            <Nav.Link as={Link} to="/DaycareDashboard">Daycare Dashboard</Nav.Link>
             </>
             }
           </Navbar>
@@ -44,6 +47,12 @@ function App() {
               <AboutUs />
             </Route>
             <Route path="/Login">
+            <Login />
+          </Route>
+          <Route path="/DaycareDashboard">
+            <DaycareAdd />
+          </Route>
+          <Route>
               <Login />
             </Route>
             <Route exact path="/DaycareSearch">
