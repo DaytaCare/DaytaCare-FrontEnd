@@ -5,11 +5,11 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import Header from './Components/Home/Header';
-import Home from './Components/Home/Home'
+import Header from './Components/Home/Header/Header.js';
+import Home from './Components/Home/Home.js'
 import AboutUs from './Components/AboutUs/AboutUs.js';
 import DaycareSearch from './Components/DaycareSearch';
-import Footer from './Components/Home/Footer';
+import Footer from './Components/Home/Footer/Footer.js';
 import Login from './Components/Auth/Login';
 
 function App() {

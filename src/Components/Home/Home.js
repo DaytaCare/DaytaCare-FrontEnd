@@ -1,6 +1,6 @@
 import './css/Home.css';
-import './css/FeaturedDaycare.css'
-import FeaturedDaycare from "./FeaturedDaycare";
+import './FeaturedDaycare/FeaturedDaycare.css'
+import FeaturedDaycare from "./FeaturedDaycare/FeaturedDaycare";
 
 function Home() {
   return(

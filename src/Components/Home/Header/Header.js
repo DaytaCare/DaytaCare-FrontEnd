@@ -1,8 +1,8 @@
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
-import useAuth from '../Hooks/useAuth';
-import './css/Header.css';
+import useAuth from '../../Hooks/useAuth';
+import './Header.css';
 
 function Header()
 {
@@ -12,7 +12,17 @@ function Header()
     <>
     <div>
       <Navbar>
-        <Navbar.Brand href="#">DaytaCare</Navbar.Brand>
+        <Navbar.Brand href="#">
+          <img
+            alt=""
+            src="/logo.svg"
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+          />
+          {' '}
+          React Bootstrap
+        </Navbar.Brand>
         <Nav.Link as={Link} to="/">Home</Nav.Link>
         <Nav.Link as={Link} to="/AboutUs">About Us</Nav.Link>
         <Nav.Link as={Link} to="/DaycareSearch">Find a Daycare</Nav.Link>
