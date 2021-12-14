@@ -12,6 +12,7 @@ import DaycareSearch from './Components/DaycareSearch';
 import Footer from './Components/Home/Footer/Footer.js';
 import Login from './Components/Auth/Login';
 import DaycareAdd from './Components/Daycare/DaycareAdd';
+import DaycareDashboard from './Components/Daycare/DaycareDashboard';
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
             <DaycareSearch />
           </Route>
           <Route path="/DaycareDashboard">
+            <DaycareDashboard />
             <DaycareAdd />
           </Route>
         </Switch>
