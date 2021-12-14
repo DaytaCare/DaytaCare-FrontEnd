@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'RoklienRegular';
+  src: url('/src/Components/Home/css/Roklien.ttf');
+}
+
+.navbar{
+  border: 1px solid #e7e7e7;
+  /* background-color: #f3f3f3; */
+}
+
+.navbar-brand{
+  padding-left: 10px;
+}
+
+.navbar-link{
+  color: black;
+  text-decoration: none;
+}
+
+.login-link{
+  float: right;
+  color: black;
+  text-decoration: none;
+}
