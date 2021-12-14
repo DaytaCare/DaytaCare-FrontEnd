@@ -1,10 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
+import useAuth from "./useAuth";
 
 export default function useFetch(url, params, skipInitialFetch) {
 
   const [loading, setLoading] = useState(true);
+
   const [shouldFetch, setShouldFetch] = useState(!skipInitialFetch);
   const [data, setData] = useState(null);
+  const { user } = useAuth();
 
   useEffect(() => {
     if (!shouldFetch) return;
@@ -15,7 +18,12 @@ export default function useFetch(url, params, skipInitialFetch) {
         let fullUrl = new URL(url)
         fullUrl.search = new URLSearchParams(params)
 
-        let response = await fetch(fullUrl);
+        let response = await fetch(fullUrl, {
+          headers: {
+            'Authorization': user ? `Bearer ${user.token}` : null
+          }
+        });
+
         let body = await response.json();
 
         setData(body);
@@ -27,11 +35,12 @@ export default function useFetch(url, params, skipInitialFetch) {
 
     setShouldFetch(false);
     fetchData();
-  }, [url, shouldFetch, params])
+
+  }, [url, user, shouldFetch, params])
 
   return useMemo(() => ({
     data,
-   
+
     isLoading: loading,
     setData,
 
