@@ -29,7 +29,6 @@ function DaycareSearch() {
     const formData = {
       city: city.value,
       state: state.value,
-      availability: availability.checked,
       amenityId: 0 | amenityId.value
     };
 
@@ -76,40 +75,13 @@ function DaycareSearch() {
                   label="All"
                   name="amenityId"
                   value="" />
-                <Form.Check
-                  type="radio"
-                  label="Parking"
-                  name="amenityId"
-                  value="1" />
-                <Form.Check
-                  type="radio"
-                  label="Indoor Playground"
-                  name="amenityId"
-                  value="2" />
-                <Form.Check
-                  type="radio"
-                  label="Pay Scaling"
-                  name="amenityId" />
-                <Form.Check
-                  type="radio"
-                  label="Shuttle Transportation"
-                  name="amenityId" />
-                <Form.Check
-                  type="radio"
-                  label="Security"
-                  name="amenityId" />
-                <Form.Check
-                  type="radio"
-                  label="Wheelchair Accessible"
-                  name="amenityId" />
-                <Form.Check
-                  type="radio"
-                  label="Education"
-                  name="amenityId" />
-                <Form.Check
-                  type="radio"
-                  label="Meal Plan"
-                  name="amenityId" />
+                {amenities.map(amenity => (
+                  <Form.Check key={amenity.id}
+                    type="radio"
+                    label={amenity.name}
+                    name="amenityId"
+                    value="" />
+                ))}
               </Col>
             </Form.Group>
             <Button variant="secondary" type="submit">Submit</Button>
@@ -124,13 +96,6 @@ function DaycareSearch() {
           </Col>
         ))}
       </Row>
-      <div>
-        {amenities.map(amenity => (
-          <ul key={amenity.id}>
-            {amenity.name}
-          </ul>
-        ))}
-      </div>
     </>
   )
 }
