@@ -9,10 +9,9 @@ function FeaturedDaycare() {
       <Row xs='auto' md='auto' className="g-4">
           <Col>
             <Card style={{ width: '260px' }}>
-              <Card.Header>Featured</Card.Header>
+              <Card.Header style={{ textAlign: 'center', height: '5rem'}}>Teddy Bear Child Care Center Inc.</Card.Header>
               <Card.Img variant="top" src="https://via.placeholder.com/250x250" />
-                <Card.Body style={{ height: '10rem'}}>
-                  <Card.Title>Teddy Bear Child Care Center Inc.</Card.Title>
+                <Card.Body>
                   <Card.Text>
                     <p>Daycare Description</p>
                     <ul>
@@ -30,17 +29,15 @@ function FeaturedDaycare() {
                 <Card.Body>
                   <Card.Link href="#">Website</Card.Link>
                   <Card.Link href="#">Contact</Card.Link>
-                  {/* <Card.Link href="#">Another Link</Card.Link> */}
                 </Card.Body>
             </Card>
           </Col>
 
           <Col>
             <Card style={{ width: '260px' }}>
-              <Card.Header>Featured</Card.Header>
+              <Card.Header style={{ textAlign: 'center', height: '5rem'}}>Alice's Rainbow Child Care Center</Card.Header>
               <Card.Img variant="top" src="https://via.placeholder.com/250x250" />
                 <Card.Body>
-                  <Card.Title>Daycare Name</Card.Title>
                   <Card.Text>
                     <p>Daycare Description</p>
                     <ul>
@@ -58,17 +55,15 @@ function FeaturedDaycare() {
                 <Card.Body>
                   <Card.Link href="#">Website</Card.Link>
                   <Card.Link href="#">Contact</Card.Link>
-                  {/* <Card.Link href="#">Another Link</Card.Link> */}
                 </Card.Body>
             </Card>
           </Col>
 
           <Col>
             <Card style={{ width: '260px' }}>
-              <Card.Header>Featured</Card.Header>
+              <Card.Header style={{ textAlign: 'center', height: '5rem'}}>KidsPoint Downtown Learning Center & Preschool</Card.Header>
               <Card.Img variant="top" src="https://via.placeholder.com/250x250" />
                 <Card.Body>
-                  <Card.Title>Daycare Name</Card.Title>
                   <Card.Text>
                     <p>Daycare Description</p>
                     <ul>
@@ -86,7 +81,6 @@ function FeaturedDaycare() {
                 <Card.Body>
                   <Card.Link href="#">Website</Card.Link>
                   <Card.Link href="#">Contact</Card.Link>
-                  {/* <Card.Link href="#">Another Link</Card.Link> */}
                 </Card.Body>
             </Card>
           </Col>

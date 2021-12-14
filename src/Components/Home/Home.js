@@ -5,9 +5,8 @@ function Home() {
   return(
     <>
     <div>
-      <h1>(Home)</h1>
       <div>
-        <h4>(About the Site)</h4>
+        <h4>About DaytaCare</h4>
         <img src="https://via.placeholder.com/550x300" alt="placeholder"/>
       </div>
 
