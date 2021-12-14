@@ -16,7 +16,7 @@ function DaycareSearch() {
 
   return (
     <>
-      <Card className="mt-4">
+      <Card className="mt-4" style={{ width: '40rem' }}>
         <Card.Body>
           <Card.Title className="mb-4">Search Daycares</Card.Title>
 
