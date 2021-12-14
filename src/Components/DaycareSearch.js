@@ -29,6 +29,7 @@ function DaycareSearch() {
     const formData = {
       city: city.value,
       state: state.value,
+      availability: availability.checked,
       amenityId: 0 | amenityId.value
     };
 
