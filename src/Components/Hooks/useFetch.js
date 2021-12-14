@@ -1,10 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
+import useAuth from "./useAuth";
 
 export default function useFetch(url) {
 
   const [loading, setLoading] = useState(true);
   const [shouldFetch, setShouldFetch] = useState(true);
   const [daycares, setDaycares] = useState(null);
+  const { user } = useAuth();
 
   useEffect(() => {
     if (!shouldFetch) return;
@@ -13,7 +15,11 @@ export default function useFetch(url) {
 
       try {
 
-        let response = await fetch(url);
+        let response = await fetch(url, {
+          headers: {
+              'Authorization': user?`Bearer ${user.token}` : null
+          }
+        });
         let body = await response.json();
 
         setDaycares(body);
