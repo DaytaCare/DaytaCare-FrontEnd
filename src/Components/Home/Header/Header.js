@@ -37,14 +37,16 @@ function Header() {
 
 
             <NavDropdown title="Log In" id="basic-nav-dropdown">
-              <NavDropdown.Item><Login/></NavDropdown.Item>
+              <NavDropdown.Item>
+                <Login />
+              </NavDropdown.Item>
             </NavDropdown>
 
             {!user && <Nav.Link as={Link} to='/Login' className="login-link" >Login</Nav.Link>}
             {user &&
               <>
                 Welcome back, {user.username}
-                <button onClick={() => logout()}>Log Out</button>
+                <button className="logout" onClick={() => logout()}>Log Out</button>
               </>
             }
 

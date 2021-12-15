@@ -35,7 +35,6 @@ navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:ho
 }
 
 .logout{
+  height: fit-content;
   border-radius: 5px;
-  margin-left: auto;
-  margin-right: auto;
 }

@@ -20,9 +20,11 @@ export default function Login() {
     }
 
     return (
-        <form onSubmit = { handleLoginSubmit }>
-        <label>Username:  <input name="username" /></label>
-        <label> Password:  <input name="password" type="password"/></label>
+        <form className="login-form" onSubmit = { handleLoginSubmit }>
+        <label>Username: <input name="username" /></label>
+        <br/>
+        <label>Password: <input name="password" type="password"/></label>
+        <br/>
         <button type="submit">Log In</button>
         </form>
     )
