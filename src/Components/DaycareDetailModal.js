@@ -35,9 +35,9 @@ function DaycareDetailModal() {
         <p>Amenities:</p>
         <p>
           {daycare.amenities.map(amenity => (
-          <ul key={amenity.amenityId}>
-          <li>{amenity.name}</li>
-          </ul>
+            <ul key={amenity.amenityId}>
+              <li>{amenity.name}</li>
+            </ul>
           ))}
         </p>
       </Modal.Body>

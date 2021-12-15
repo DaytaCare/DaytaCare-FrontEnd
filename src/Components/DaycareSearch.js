@@ -96,7 +96,7 @@ function DaycareSearch() {
       </Card>
 
       <Route path="/DaycareSearch/:id">
-          <DaycareDetailModal />
+        <DaycareDetailModal />
       </Route>
 
       <Row>
