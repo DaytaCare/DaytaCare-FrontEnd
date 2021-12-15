@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import { Spinner, Row, Col, Form, Button, Card } from 'react-bootstrap';
-import DaycareCards from './DaycareCards';
+import { Route } from 'react-router-dom';
+import DaycareDetailModal from './DaycareDetailModal';
+import DaycareCard from './DaycareCard';
 import useFetch from '../Components/Hooks/useFetch';
 
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/parents/search';
@@ -18,7 +20,7 @@ function DaycareSearch() {
   // }
 
   if (!amenities) {
-    return (<Spinner animation="grow" variant="primary" />);
+    return (<Spinner animation="grow" variant="danger" />);
   }
 
   function handleSubmit(event) {
@@ -40,8 +42,6 @@ function DaycareSearch() {
 
     setParams(formData);
     reloadDaycares();
-
-    console.log(formData);
 
     city.focus();
   }
@@ -95,10 +95,14 @@ function DaycareSearch() {
         </Card.Body>
       </Card>
 
+      <Route path="/DaycareSearch/:id">
+        <DaycareDetailModal />
+      </Route>
+
       <Row>
         {daycares && daycares.map(daycare => (
           <Col key={daycare.daycareId}>
-            <DaycareCards daycare={daycare} />
+            <DaycareCard daycare={daycare} />
           </Col>
         ))}
       </Row>

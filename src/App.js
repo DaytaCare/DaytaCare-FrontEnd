@@ -31,7 +31,7 @@ function App() {
         <Route path="/Login">
           <Login />
         </Route>
-        <Route exact path="/DaycareSearch">
+        <Route path="/DaycareSearch">
           <DaycareSearch />
         </Route>
         <Route path="/DaycareDashboard">
@@ -46,7 +46,6 @@ function App() {
         <Route path="/DaycareForm">
           <DaycareForm />
         </Route>
-
       </Switch>
       <Footer />
     </>

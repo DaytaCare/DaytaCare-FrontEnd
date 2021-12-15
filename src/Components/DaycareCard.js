@@ -1,12 +1,14 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 
-function DaycareCards(props) {
+function DaycareCard(props) {
 
   const { daycare } = props;
+  const history = useHistory();
 
   function showModal() {
-
+    history.push(`/DaycareSearch/${daycare.daycareId}`)
   }
 
   return (
@@ -20,4 +22,4 @@ function DaycareCards(props) {
   )
 }
 
-export default DaycareCards;
+export default DaycareCard;
