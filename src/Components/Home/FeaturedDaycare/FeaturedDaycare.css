@@ -8,13 +8,34 @@ h5{
   font-family: 'RoklienRegular';
 }
 
-.card-header{
- text-align: center;
+.featuredDaycares{
+  width:50%;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto;
 }
 
-.g-4{
-  /* background-color: #DBDBDB; */
-  width: 45%;
-  margin-right: auto;
-  margin-left: auto;
+.card{
+  /* max-height: 350px; */
+  overflow-y: scroll;
+}
+
+.card-header{
+  height: 4rem;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.cardImg{
+  width:100%;
+  height:15%;
+}
+
+.amenities{
+  text-align: left;
+  list-style-type: none;
+}
+
+.list-group-flush{
+  text-align: left;
 }
