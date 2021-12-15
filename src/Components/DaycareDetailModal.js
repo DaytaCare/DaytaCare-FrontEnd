@@ -2,7 +2,6 @@ import React from 'react';
 import { Modal } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import useFetch from './Hooks/useFetch';
-import { useState } from 'react';
 import {useHistory} from 'react-router-dom';
 
 function DaycareDetailModal() {
