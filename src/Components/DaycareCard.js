@@ -5,10 +5,14 @@ import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 function DaycareCard(props) {
 
   const { daycare } = props;
+  const history = useHistory();
 
+  function showDaycare() {
+    history.push("/DaycareSearch/:id")
+  } 
 
   function showModal() {
-
+    showDaycare();
   }
 
   return (
