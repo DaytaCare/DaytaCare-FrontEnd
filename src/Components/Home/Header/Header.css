@@ -3,9 +3,14 @@
   src: url('/src/Components/Home/css/Roklien.ttf');
 }
 
+h1{
+  background-color: #f3f3f3;
+  padding-top: 25px;
+  margin-bottom: 0;
+}
+
 .navbar{
-  border: 1px solid #e7e7e7;
-  /* background-color: #f3f3f3; */
+  background-color: #f3f3f3;
 }
 
 .navbar-brand{
@@ -15,6 +20,7 @@
 .navbar-link{
   color: black;
   text-decoration: none;
+  
 }
 
 .login-link{
