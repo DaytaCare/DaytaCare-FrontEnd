@@ -6,6 +6,7 @@
 .home{
   padding-top: 10px;
   padding-bottom: 10px;
+  text-align: center;
 }
 
 h1{
@@ -13,13 +14,17 @@ h1{
   font-family: 'RoklienRegular';
 }
 
-h4{
+h5{
   text-align: center;
   font-family: 'RoklienRegular';
 }
 
 .about{
-  margin-bottom: 70px;
+  width:40%;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto;
+  text-align: center;
 }
 
 .aboutImg {
@@ -28,5 +33,6 @@ h4{
   margin-right: auto;
   margin-bottom: 10px;
   margin-left: auto;
-  border-radius: 10px;
+  height: 200px;
+  width: 200px;
 }
