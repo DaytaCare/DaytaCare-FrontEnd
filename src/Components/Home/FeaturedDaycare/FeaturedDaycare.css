@@ -25,9 +25,6 @@ h5{
   list-style-type: none;
 }
 
-.g-4{
-  /* background-color: #DBDBDB; */
-  width: 45%;
-  margin-right: auto;
-  margin-left: auto;
+.list-group-flush{
+  text-align: left;
 }

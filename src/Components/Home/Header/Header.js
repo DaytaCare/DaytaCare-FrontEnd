@@ -33,7 +33,7 @@ function Header() {
             <NavDropdown.Divider />
             <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
           </NavDropdown>
-          {!user && <Nav.Link as={Link} to='/Login' className="login-link" >Login</Nav.Link>}
+          {!user && <Nav.Link as={Link} to='/Login' className="login-link" >Log In</Nav.Link>}
           {user &&
             <>
               Welcome back, {user.username}
