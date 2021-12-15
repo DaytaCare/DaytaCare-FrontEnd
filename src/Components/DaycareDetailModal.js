@@ -2,7 +2,7 @@ import React from 'react';
 import { Modal } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import useFetch from './Hooks/useFetch';
-import {useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 function DaycareDetailModal() {
 
@@ -11,7 +11,6 @@ function DaycareDetailModal() {
   const { data: daycare } = useFetch(daytaCareApi);
   const history = useHistory();
 
-  console.log("id:", id);
   console.log("daycare:", daycare);
 
   function closeModal() {
@@ -19,7 +18,7 @@ function DaycareDetailModal() {
   }
 
   if (!daycare) {
-     return null
+    return null
   }
 
   return (

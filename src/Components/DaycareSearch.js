@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Spinner, Row, Col, Form, Button, Card } from 'react-bootstrap';
-import { Route } from 'react-router-dom/cjs/react-router-dom.min';
+import { Route } from 'react-router-dom';
 import DaycareDetailModal from './DaycareDetailModal';
 import DaycareCard from './DaycareCard';
 import useFetch from '../Components/Hooks/useFetch';
@@ -20,7 +20,7 @@ function DaycareSearch() {
   // }
 
   if (!amenities) {
-    return (<Spinner animation="grow" variant="primary" />);
+    return (<Spinner animation="grow" variant="danger" />);
   }
 
   function handleSubmit(event) {
