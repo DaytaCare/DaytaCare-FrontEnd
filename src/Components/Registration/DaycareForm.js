@@ -7,23 +7,24 @@ export default function DaycareRegister() {
         event.preventDefault();
 
         const form = event.target;
-        const { email, username, password} = form.elements;
+        const { email, username, password } = form.elements;
 
         const daycareRegData = {
-            email:  email.value,
-            username:  username.value,
-            password:  password.value,
+            email: email.value,
+            username: username.value,
+            password: password.value,
+            role: "Daycare Provider"
         };
         console.log(daycareRegData);
         form.reset();
     }
 
     return (
-        <Form onSubmit = { handleDaycareRegisterSubmit }>
+        <Form onSubmit={handleDaycareRegisterSubmit}>
             <Form.Label>Email:  <input name="email" type="email" /></Form.Label>
-        <Form.Label>Username:  <input name="username" /></Form.Label>
-        <Form.Label> Password:  <input name="password" type="password"/></Form.Label>
-        <Button type="submit">Register</Button>
+            <Form.Label>Username:  <input name="username" /></Form.Label>
+            <Form.Label> Password:  <input name="password" type="password" /></Form.Label>
+            <Button type="submit">Register</Button>
         </Form>
     )
 }
