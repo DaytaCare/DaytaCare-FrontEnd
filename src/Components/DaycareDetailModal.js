@@ -10,7 +10,6 @@ function DaycareDetailModal() {
   const { id } = useParams();
   const daytaCareApi = `https://daytacare.azurewebsites.net/api/parents/daycare/${id}`;
   const { data: daycare } = useFetch(daytaCareApi);
-  const [show, setShow] = useState(false);
   const history = useHistory();
 
   console.log("id:", id);
