@@ -43,8 +43,6 @@ function DaycareSearch() {
     setParams(formData);
     reloadDaycares();
 
-    console.log(formData);
-
     city.focus();
   }
 
