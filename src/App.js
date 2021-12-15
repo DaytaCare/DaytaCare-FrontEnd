@@ -34,7 +34,6 @@ function App() {
           </Route>
           <Route path="/DaycareDashboard">
             <DaycareDashboard />
-            <DaycareAdd />
           </Route>
         </Switch>
         <Footer />
