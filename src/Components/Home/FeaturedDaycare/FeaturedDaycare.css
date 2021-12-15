@@ -9,10 +9,15 @@ h5{
 }
 
 .featuredDaycares{
-  width:45%;
+  width:50%;
   margin-right: auto;
   margin-bottom: 30px;
   margin-left: auto;
+}
+
+.card{
+  /* max-height: 350px; */
+  overflow-y: scroll;
 }
 
 .card-header{
