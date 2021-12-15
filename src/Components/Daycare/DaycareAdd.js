@@ -127,7 +127,7 @@ return (
             type="checkbox"
             name="availability"
             value="true" 
-            // onChange={e => setAvailability(e.target.value)}
+            onChange={e => setAvailability(e.target.checked)}
             />
         </Form.Group>
         

@@ -8,15 +8,16 @@ const daytaCareApi = 'https://daytacare.azurewebsites.net/api/daycares';
 
 export default function ShowMyDaycares() {
 
-  var { data: daycares } = useFetch(daytaCareApi);
+  var { data: daycares, reload, isLoading } = useFetch(daytaCareApi);
   console.log("daycares", daycares)
 
   const [showAddForm, setShowAddForm] = useState(false);
-  const { reload, isLoading } = useFetch(daytaCareApi);
   const { user } = useAuth();
 
-
-  const handleClose = () => setShowAddForm(false);
+  function handleClose(){
+    setShowAddForm(false);
+    reload();
+  }
 
 
   function handleShowAddForm(event) {
