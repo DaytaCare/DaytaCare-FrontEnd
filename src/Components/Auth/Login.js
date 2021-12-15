@@ -20,7 +20,7 @@ export default function Login() {
     }
 
     return (
-        <form onSubmit = { handleLoginSubmit }>
+        <form className="login-form" onSubmit = { handleLoginSubmit }>
         <label>Username:  <input name="username" /></label>
         <label> Password:  <input name="password" type="password"/></label>
         <button type="submit">Log In</button>
