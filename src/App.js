@@ -12,6 +12,9 @@ import DaycareSearch from './Components/DaycareSearch';
 import Footer from './Components/Home/Footer/Footer.js';
 import Login from './Components/Auth/Login';
 import DaycareAdd from './Components/Daycare/DaycareAdd';
+import Registration from './Components/Registration/Registration';
+import DaycareForm from './Components/Registration/DaycareForm';
+import ParentForm from './Components/Registration/ParentForm';
 
 function App() {
 
@@ -33,6 +36,11 @@ function App() {
           </Route>
           <Route path="/DaycareDashboard">
             <DaycareAdd />
+          </Route>
+          <Route path="/Registration">
+            <Registration />
+            <DaycareForm />
+            <ParentForm />
           </Route>
         </Switch>
         <Footer />

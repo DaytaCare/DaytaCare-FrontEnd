@@ -25,6 +25,7 @@ function Header() {
             <Nav.Link as={Link} to="/AboutUs" className="navbar-link" >About Us</Nav.Link>
             <Nav.Link as={Link} to="/DaycareSearch" className="navbar-link" >Find a Daycare</Nav.Link>
             <Nav.Link as={Link} to="/DaycareDashboard">Daycare Dashboard</Nav.Link>
+            <Nav.Link as={Link} to="/Registration">Register</Nav.Link>
           </Nav>
           <NavDropdown title="Log In" id="basic-nav-dropdown">
             <NavDropdown.Item href="/Login">Login</NavDropdown.Item>
