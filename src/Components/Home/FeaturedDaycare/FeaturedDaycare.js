@@ -1,5 +1,5 @@
 import './FeaturedDaycare.css'
-import { Container, Row, Col, Card, Button, ListGroup, ListGroupItem, CardGroup } from 'react-bootstrap'
+import { Container, Card, Button, ListGroup, ListGroupItem, CardGroup } from 'react-bootstrap'
 
 function FeaturedDaycare() {
   return (
