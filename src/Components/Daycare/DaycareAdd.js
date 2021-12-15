@@ -19,7 +19,9 @@ export default function DaycareAdd(props) {
     const [email, setEmail ] = useState('')
     const [price, setPrice ] = useState('')
     const [licenseNumber, setLicenseNumber ] = useState('')
-    const [availability, setAvailability ] = useState(Boolean)
+    const [availability, setAvailability ] = useState(false)
+    const onSave = props.onSave
+
 
 async function handleDaycareAdd(event) {
   event.preventDefault()
@@ -61,6 +63,7 @@ async function handleDaycareAdd(event) {
     //reload();
     //console.log('Submitted successfully', formData);
     console.log('Submitted successfully');
+    onSave();
     //form.reset();
 }
 
@@ -123,7 +126,9 @@ return (
           <Form.Check
             type="checkbox"
             name="availability"
-            value="true" />
+            value="true" 
+            onChange={e => setAvailability(e.target.checked)}
+            />
         </Form.Group>
         
         <Button variant="primary" type="submit">Submit</Button>
