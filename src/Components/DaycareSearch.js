@@ -27,23 +27,10 @@ function DaycareSearch() {
     event.preventDefault();
 
     const form = event.target;
-    const { city, state, availability, amenityId } = form.elements;
-    const formData = {
-      city: city.value,
-      state: state.value,
-    }
-
-    if (availability.checked)
-      formData.availability = true;
-
-    let amenityIdValue = 0 | amenityId.value;
-    if (amenityIdValue)
-      formData.amenityId = amenityIdValue;
+    const formData = new FormData(form)
 
     setParams(formData);
     reloadDaycares();
-
-    city.focus();
   }
 
   return (
@@ -76,14 +63,9 @@ function DaycareSearch() {
             <Form.Group as={Row} className="mb-3">
               <Form.Label as="legend" column sm={2}>Amenities</Form.Label>
               <Col sm={10}>
-                <Form.Check
-                  type="radio"
-                  label="All"
-                  name="amenityId"
-                  value="" />
                 {amenities.map(amenity => (
                   <Form.Check key={amenity.id}
-                    type="radio"
+                    type="checkbox"
                     label={amenity.name}
                     name="amenityId"
                     value={amenity.id} />
@@ -94,11 +76,9 @@ function DaycareSearch() {
           </Form>
         </Card.Body>
       </Card>
-
       <Route path="/DaycareSearch/:id">
         <DaycareDetailModal />
       </Route>
-
       <Row>
         {daycares && daycares.map(daycare => (
           <Col key={daycare.daycareId}>
