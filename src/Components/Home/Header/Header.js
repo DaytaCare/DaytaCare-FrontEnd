@@ -34,10 +34,12 @@ function Header() {
             <NavItem className="tab2">
               <Nav.Link as={Link} to="/DaycareDashboard" className="navbar-link">Daycare Dashboard</Nav.Link>
             </NavItem>
+          </Nav>
 
+          <h1 className="navHeader">DaytaCare</h1>
 
+          <Nav>
             <NavDropdown title="Log In" id="basic-nav-dropdown">
-
               <NavDropdown.Item>
                 <Login />
               </NavDropdown.Item>
