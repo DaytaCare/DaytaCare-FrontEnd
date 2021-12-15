@@ -1,77 +1,62 @@
 import './FeaturedDaycare.css'
-import {Card, Button, ListGroup, ListGroupItem, CardGroup} from 'react-bootstrap'
+import { Container, Row, Col, Card, Button, ListGroup, ListGroupItem, CardGroup } from 'react-bootstrap'
 
 function FeaturedDaycare() {
-
-  return(
+  return (
     <>
-    <div className="featuredDaycares">
-      <CardGroup>
-        <Card className="card">
-          <Card.Header className="card-header1">Featured Daycare</Card.Header>
-            <Card.Body>
-              <Card.Text>
-                <p>Daycare Description</p>
-                <ul className="amenities">
-                  <li>Amenity</li>
-                  <li>Amenity</li>
-                  <li>Amenity</li>
-                </ul>
-              </Card.Text>
-            </Card.Body>
+      <Container as='div' className="featuredDaycares">
+          <CardGroup>
+            <Card className="card">
+              <Card.Header className="card-header">Featured Daycare</Card.Header>
+              <Card.Body>
+                <Card.Text>Description</Card.Text>
+                <Card.Text>Location</Card.Text>
+                <Card.Text>Contact Info</Card.Text>
+              </Card.Body>
               <ListGroup className="list-group-flush">
                 <ListGroupItem>Daycare Type: Center</ListGroupItem>
+                <ListGroupItem>Indoor Playground</ListGroupItem>
                 <ListGroupItem>Availability: Yes</ListGroupItem>
-                <ListGroupItem>555-5555</ListGroupItem>
               </ListGroup>
-            <Card.Body>
-              <Button href="#">Website</Button>
-            </Card.Body>
-        </Card>
-        <Card className="card">
-          <Card.Header className="card-header2">Alice's Rainbow Child Care Center</Card.Header>
-            <Card.Body>
-              <Card.Text>
-                <p>Daycare Description</p>
-                <ul className="amenities">
-                  <li>Amenity</li>
-                  <li>Amenity</li>
-                  <li>Amenity</li>
-                </ul>
-              </Card.Text>
-            </Card.Body>
-            <ListGroup className="list-group-flush">
-              <ListGroupItem>Daycare Type: Center</ListGroupItem>
-              <ListGroupItem>Availability: Yes</ListGroupItem>
-              <ListGroupItem>(319)354-1466</ListGroupItem>
-            </ListGroup>
-            <Card.Body>
-              <Button href="https://www.arainbowcc.com/">Website</Button>
-            </Card.Body>
-        </Card>
-        <Card className="card">
-          <Card.Header className="card-header3">KidsPoint Downtown Learning Center & Preschool</Card.Header>
-            <Card.Body>
-              <Card.Text>
-                <p>Daycare Description</p>
-                <ul className="amenities">
-                  <li>Amenity</li>
-                  <li>Amenity</li>
-                  <li>Amenity</li>
-                </ul>
-              </Card.Text>
-            </Card.Body>
-            <ListGroup className="list-group-flush">
+              <Card.Footer>
+                <Button href="#">Website</Button>
+              </Card.Footer>
+            </Card>
+            <Card className="card">
+              <Card.Header className="card-header">Alice's Rainbow Child Care Center</Card.Header>
+              <Card.Body>
+                <Card.Text>Description</Card.Text>
+                <Card.Text>Location</Card.Text>
+                <Card.Text>Contact Info</Card.Text>
+              </Card.Body>
+              <ListGroup className="list-group-flush">
                 <ListGroupItem>Daycare Type: Center</ListGroupItem>
+                <ListGroupItem>Indoor Playground</ListGroupItem>
                 <ListGroupItem>Availability: Yes</ListGroupItem>
-                <ListGroupItem>(319)555-5555</ListGroupItem>
               </ListGroup>
-            <Card.Body>
-              <Button href="#" className="button">Website</Button>
-            </Card.Body>
-        </Card>
-      </CardGroup>
-    </div>
+              <Card.Footer>
+                <Button href="https://www.arainbowcc.com/">Website</Button>
+              </Card.Footer>
+            </Card>
+
+            <Card className="card">
+              <Card.Header className="card-header">Featured Daycare</Card.Header>
+              <Card.Body>
+                <Card.Text>Description</Card.Text>
+                <Card.Text>Location</Card.Text>
+                <Card.Text>Contact Info</Card.Text>
+              </Card.Body>
+              <ListGroup className="list-group-flush">
+                <ListGroupItem>Daycare Type: Center</ListGroupItem>
+                <ListGroupItem>Indoor Playground</ListGroupItem>
+                <ListGroupItem>Availability: Yes</ListGroupItem>
+              </ListGroup>
+              <Card.Footer>
+                <Button href="#" className="button">Website</Button>
+              </Card.Footer>
+            </Card>
+          </CardGroup>
+      </Container>
     </>
   )
 }
