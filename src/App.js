@@ -18,34 +18,39 @@ import ParentForm from './Components/Registration/ParentForm';
 
 function App() {
 
-    return (
-      <>
-        <Header/>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/AboutUs">
-            <AboutUs />
-          </Route>
-          <Route path="/Login">
-            <Login />
-          </Route>
-          <Route exact path="/DaycareSearch">
-            <DaycareSearch />
-          </Route>
-          <Route path="/DaycareDashboard">
-            <DaycareAdd />
-          </Route>
-          <Route path="/Registration">
-            <Registration />
-            <DaycareForm />
-            <ParentForm />
-          </Route>
-        </Switch>
-        <Footer />
-      </>
-    );
-  }
+  return (
+    <>
+      <Header />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/AboutUs">
+          <AboutUs />
+        </Route>
+        <Route path="/Login">
+          <Login />
+        </Route>
+        <Route exact path="/DaycareSearch">
+          <DaycareSearch />
+        </Route>
+        <Route path="/DaycareDashboard">
+          <DaycareAdd />
+        </Route>
+        <Route path="/Registration">
+          <Registration />
+        </Route>
+        <Route path="/ParentForm">
+          <ParentForm />
+        </Route>
+        <Route path="/DaycareForm">
+          <DaycareForm />
+        </Route>
+
+      </Switch>
+      <Footer />
+    </>
+  );
+}
 
 export default App;

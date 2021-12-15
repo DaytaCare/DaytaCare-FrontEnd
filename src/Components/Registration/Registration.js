@@ -1,17 +1,20 @@
 import React from 'react';
 import { Card, Nav, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+//import DaycareForm from './DaycareForm';
+//import ParentForm from './ParentForm';
 
 export default function Registration() {
 
     return (
         <Card>
             <Card.Header>
-                <Nav variant="tabs" defaultActiveKey="#first">
+                <Nav variant="pills" defaultActiveKey="#first">
                     <Nav.Item>
-                        <Nav.Link href="/ParentForm">Parent Registration</Nav.Link>
+                    <Nav.Link as={Link} to="/ParentForm">Parent</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link href="/DaycareForm">Owner Registration</Nav.Link>
+                    <Nav.Link as={Link} to="/DaycareForm">Owner</Nav.Link>
                     </Nav.Item>
                 </Nav>
             </Card.Header>
