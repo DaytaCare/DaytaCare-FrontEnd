@@ -9,28 +9,7 @@ h5{
 }
 
 .featuredDaycares{
-  width:50%;
-  margin-right: auto;
-  margin-bottom: 30px;
-  margin-left: auto;
-}
-
-.card{
-  overflow-y: scroll;
-}
-
-.card-header{
-  padding-top: 10px;
-}
-
-.cardImg{
-  width:100%;
-  height:15%;
-}
-
-.amenities{
-  text-align: left;
-  list-style-type: none;
+  width: 52%;
 }
 
 .list-group-flush{
