@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, Row, Col } from 'react-bootstrap';
 
 export default function ParentRegister() {
 
@@ -13,7 +13,6 @@ export default function ParentRegister() {
             email: email.value,
             username: username.value,
             password: password.value,
-            role: "Parent",
         };
         console.log(parentRegData);
         form.reset();
@@ -21,20 +20,30 @@ export default function ParentRegister() {
 
     return (
         <Form onSubmit={handleParentRegisterSubmit} title="Parent Registration Form">
-            <Form.Group className="mb-3" controlId="form.email">
-                <Form.Label>Email:</Form.Label>
-                <Form.Control type="email" placeholder="jane@example.com" value="email" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="form.username">
-                <Form.Label>Username:</Form.Label>
-                <Form.Control type="username" value="username" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="form.password">
-                <Form.Label>Password:</Form.Label>
-                <Form.Control name="password" type="password" value="password" />
-            </Form.Group>
+            <Row>
+                <Col xs="auto">
+                    <Form.Group className="mb-3" controlId="form.email">
+                        <Form.Label>Email:</Form.Label>
+                        <Form.Control name="email" type="email" placeholder="jane@example.com" />
+                    </Form.Group>
 
-            <Button type="submit">Register</Button>
+                    <Form.Group className="mb-3" controlId="form.username">
+                        <Form.Label>Username:</Form.Label>
+                        <Form.Control name="username" type="username" />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="form.password">
+                        <Form.Label>Password:</Form.Label>
+                        <Form.Control name="password" type="password" />
+                        <Form.Text id="passwordHelpBlock" muted>
+                            Your password must be 8-20 characters long, contain letters and numbers, and
+                            must not contain spaces, special characters, or emoji.
+                        </Form.Text>
+                    </Form.Group>
+
+                    <Button type="submit">Register</Button>
+                </Col>
+            </Row>
         </Form>
     )
 }
