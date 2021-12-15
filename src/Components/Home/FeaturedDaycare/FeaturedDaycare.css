@@ -16,14 +16,11 @@ h5{
 }
 
 .card{
-  /* max-height: 350px; */
   overflow-y: scroll;
 }
 
 .card-header{
-  height: 4rem;
   padding-top: 10px;
-  text-align: center;
 }
 
 .cardImg{
