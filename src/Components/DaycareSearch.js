@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Spinner, Row, Col, Form, Button, Card, Modal } from 'react-bootstrap';
 import { Route } from 'react-router-dom/cjs/react-router-dom.min';
 import DaycareDetailModal from './DaycareDetailModal';
-import DaycareCards from './DaycareCard';
+import DaycareCard from './DaycareCard';
 import useFetch from '../Components/Hooks/useFetch';
 
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/parents/search';
@@ -104,7 +104,7 @@ function DaycareSearch() {
       <Row>
         {daycares && daycares.map(daycare => (
           <Col key={daycare.daycareId}>
-            <DaycareCards daycare={daycare} />
+            <DaycareCard daycare={daycare} />
           </Col>
         ))}
       </Row>
