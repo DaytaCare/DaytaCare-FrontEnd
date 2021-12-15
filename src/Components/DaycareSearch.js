@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Spinner, Row, Col, Form, Button, Card } from 'react-bootstrap';
+import { Spinner, Row, Col, Form, Button, Card, Modal } from 'react-bootstrap';
+import { Route } from "react-router-dom/cjs/react-router-dom.min";
 import DaycareCards from './DaycareCards';
 import useFetch from '../Components/Hooks/useFetch';
 
@@ -94,6 +95,12 @@ function DaycareSearch() {
           </Form>
         </Card.Body>
       </Card>
+
+      <Route path="/DaycareSearch/:id">
+        <Modal show={true}>
+          Proof of life
+        </Modal>
+      </Route>
 
       <Row>
         {daycares && daycares.map(daycare => (
