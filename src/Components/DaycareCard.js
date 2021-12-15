@@ -7,15 +7,9 @@ function DaycareCard(props) {
   const { daycare } = props;
   const history = useHistory();
 
-  function showDaycare() {
-    history.push(`/DaycareSearch/${daycare.daycareId}`)
-  } 
-
   function showModal() {
-    showDaycare();
+    history.push(`/DaycareSearch/${daycare.daycareId}`)
   }
-
-  console.log(showDaycare);
 
   return (
     <Card className='text-center' onClick={showModal} style={{ width: '25rem' }}>

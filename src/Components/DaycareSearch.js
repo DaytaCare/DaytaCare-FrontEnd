@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Spinner, Row, Col, Form, Button, Card, Modal } from 'react-bootstrap';
+import { Spinner, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import { Route } from 'react-router-dom/cjs/react-router-dom.min';
 import DaycareDetailModal from './DaycareDetailModal';
 import DaycareCard from './DaycareCard';
