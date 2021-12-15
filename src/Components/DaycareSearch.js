@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import { Spinner, Row, Col, Form, Button, Card, Modal } from 'react-bootstrap';
-import { Route } from "react-router-dom/cjs/react-router-dom.min";
-import DaycareCards from './DaycareCards';
+import { Route } from 'react-router-dom/cjs/react-router-dom.min';
+import DaycareDetailModal from './DaycareDetailModal';
+import DaycareCards from './DaycareCard';
 import useFetch from '../Components/Hooks/useFetch';
 
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/parents/search';
@@ -97,9 +98,7 @@ function DaycareSearch() {
       </Card>
 
       <Route path="/DaycareSearch/:id">
-        <Modal show={true}>
-          Proof of life
-        </Modal>
+          <DaycareDetailModal />
       </Route>
 
       <Row>

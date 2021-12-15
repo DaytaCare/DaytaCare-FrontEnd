@@ -1,9 +1,11 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
-function DaycareCards(props) {
+function DaycareCard(props) {
 
   const { daycare } = props;
+
 
   function showModal() {
 
@@ -20,4 +22,4 @@ function DaycareCards(props) {
   )
 }
 
-export default DaycareCards;
+export default DaycareCard;

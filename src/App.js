@@ -28,7 +28,7 @@ function App() {
           <Route path="/Login">
             <Login />
           </Route>
-          <Route exact path="/DaycareSearch">
+          <Route path="/DaycareSearch">
             <DaycareSearch />
           </Route>
           <Route path="/DaycareDashboard">
