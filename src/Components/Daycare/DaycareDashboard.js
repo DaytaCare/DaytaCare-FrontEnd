@@ -63,12 +63,16 @@ export default function ShowMyDaycares() {
     <>
     
       <Modal show={isEditing} onHide={handleClose}>
+        <Modal.Body>
         <Modal.Header closeButton />
         <DaycareEdit onSave={handleUpdateDaycare} daycare={currentDaycare} />
+        </Modal.Body>
         </Modal>
       <Modal show={showAddForm} onHide={handleClose}>
+        <Modal.Body>
         <Modal.Header closeButton />
         <DaycareAdd onSave={handleClose} />
+        </Modal.Body>
       </Modal>
       <h1>Your Daycares</h1>
       <Button onClick={handleShowAddForm}>Add a Daycare</Button>
