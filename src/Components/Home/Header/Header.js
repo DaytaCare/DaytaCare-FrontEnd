@@ -9,7 +9,7 @@ function Header() {
   return (
     <>
       <Navbar className="navbar">
-        <Navbar.Brand href="#" className="navbar-brand">
+        <Navbar.Brand href="/" className="navbar-brand">
           <img
             alt="DaytaCare Logo"
             src="/DaytaCare.png"
