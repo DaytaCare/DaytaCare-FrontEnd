@@ -8,8 +8,8 @@ export default function Registration() {
 
     return (
         <div className="signupOptions">
-            <Button href="/ParentForm">Parent</Button>
-            <Button href="/DaycareForm">Daycare</Button>
+            <Button as="a" href="/ParentForm">Parent</Button>
+            <Button as="a" href="/DaycareForm">Daycare</Button>
         </div>
 
 

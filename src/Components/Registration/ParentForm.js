@@ -1,14 +1,14 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
+import './ParentForm.css'
 import './Registration.css'
 
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/Users'
 
-export default function ParentRegister() {
-
+export default function ParentRegister()
+{
     async function handleParentRegisterSubmit(event) {
         event.preventDefault();
-
         const form = event.target;
         const { email, username, password, firstName, lastName, phone, familyBio } = form.elements;
 
@@ -23,26 +23,23 @@ export default function ParentRegister() {
         };
         console.log("Submitting....", parentRegData);
 
-
         const result = await fetch(`${daytaCareApi}/ParentRegister`, {
             method: 'post',
             body: JSON.stringify(parentRegData),
             headers: {
                 'Content-Type': 'application/json',
             },
-
         })
-
         console.log(result);
         form.reset();
         //onSave();
     }
 
     return (
-        <div className="centerP form-section">
-            <Form onSubmit={handleParentRegisterSubmit} title="Parent Registration Form" className="parent-signup">
+        <div className="form-section">
+            <Form onSubmit={handleParentRegisterSubmit} title="Parent Registration" className="parent-signup">
                 <Form.Group className="mb-3" controlId="form.email">
-                    <legend>Parent Registration Form</legend>
+                    <legend>Parent Registration</legend>
                     <Form.Label>Email:</Form.Label>
                     <Form.Control name="email" type="email" placeholder="jane@example.com" />
                 </Form.Group>

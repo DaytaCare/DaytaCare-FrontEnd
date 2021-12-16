@@ -1,11 +1,12 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
-import './Registration.css'
+import './DaycareForm.css';
+import './Registration.css';
 
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/Users'
 
-export default function ParentRegister() {
-
+export default function DaycareRegister()
+{
     async function handleDaycareRegisterSubmit(event) {
         event.preventDefault();
 
@@ -30,19 +31,19 @@ export default function ParentRegister() {
         form.reset();
         //onSave();
     }
-
     return (
-        <div className="form-section" title="Owner Registration Form">
+        <div className="form-section" title="Daycare Registration">
             <Form onSubmit={handleDaycareRegisterSubmit} className="daycare-signup">
-                <legend>Owner Registration Form</legend>
+                <legend>Daycare Registration</legend>
                 <Form.Group className="mb-3" controlId="form.email">
                     <Form.Label>Email:</Form.Label>
                     <Form.Control name="email" type="email" placeholder="jane@example.com" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="form.username">
                     <Form.Label>Username:</Form.Label>
-                    <Form.Control name="username" />
+                    <Form.Control name="username"/>
                 </Form.Group>
+
                 <Form.Group className="mb-3" controlId="form.password">
                     <Form.Label>Password:</Form.Label>
                     <Form.Control name="password" type="password" />
