@@ -31,7 +31,6 @@ function Header() {
             <Nav.Link as={Link} to="/DaycareDashboard" className="navbar-link">Daycare Dashboard</Nav.Link>
           </NavItem>
         </Nav>
-
         <Nav>
           <NavItem>
           {!user && <Nav.Link as={Link} to='/Login' className="navbar-link">Log In</Nav.Link>}
@@ -50,5 +49,4 @@ function Header() {
     </>
   )
 }
-
 export default Header;
