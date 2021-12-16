@@ -11,7 +11,7 @@ import AboutUs from './Components/AboutUs/AboutUs.js';
 import DaycareSearch from './Components/DaycareSearch';
 import Footer from './Components/Home/Footer/Footer.js';
 import Login from './Components/Auth/Login';
-import DaycareAdd from './Components/Daycare/DaycareAdd';
+import DaycareDashboard from './Components/Daycare/DaycareDashboard';
 import Registration from './Components/Registration/Registration';
 import DaycareForm from './Components/Registration/DaycareForm';
 import ParentForm from './Components/Registration/ParentForm';
@@ -35,7 +35,7 @@ function App() {
           <DaycareSearch />
         </Route>
         <Route path="/DaycareDashboard">
-          <DaycareAdd />
+          <DaycareDashboard />
         </Route>
         <Route path="/Registration">
           <Registration />
