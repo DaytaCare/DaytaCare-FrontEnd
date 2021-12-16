@@ -24,7 +24,7 @@ export default function Registration() {
                     If you are a parent and wanting to search for available daycares, please use the Parent Registration
                     Daycare owners, please use the Owner Registration to register and add your daycares.
                 </Card.Text>
-                <Button variant="primary">I don't think we need this button unless to cancel/close form</Button>
+                <Button href="/">Cancel</Button>
             </Card.Body>
         </Card>
     )

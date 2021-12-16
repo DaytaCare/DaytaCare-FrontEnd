@@ -55,9 +55,17 @@ export default function ParentRegister() {
                             <Form.Control name="password" type="password" />
                         </Form.Group>
 
-                        <Button type="submit">Register</Button>
+                        <Form.Group>
+                            <Button variant="primary" type="submit" size="lg">Register</Button>
+                        </Form.Group>
+
+                        <Form.Group>
+                            <Button variant="secondary" href="/">Return Home</Button>{' '}
+                            <Button variant="info" href="/Registration">Back</Button>
+                        </Form.Group>
                     </Col>
                 </Row>
+
             </Form>
         </div>
     )
