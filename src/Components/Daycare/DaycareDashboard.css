@@ -1,0 +1,8 @@
+.myDaycares {
+display:inline-block;
+}
+
+.addDaycare {
+  display: block;
+  margin-left: 10px;
+}

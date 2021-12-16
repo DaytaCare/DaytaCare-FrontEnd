@@ -1,9 +1,10 @@
 import useFetch from '../Hooks/useFetch';
 import useAuth from '../Hooks/useAuth';
-import { Card, Col, Button, Modal } from 'react-bootstrap';
+import { Card, Col, Button, Modal, Container } from 'react-bootstrap';
 import DaycareAdd from '../Daycare/DaycareAdd';
 import DaycareEdit from '../Daycare/DaycareEdit';
 import { useState } from 'react';
+import './DaycareDashboard.css'
 
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/daycares';
 
@@ -75,9 +76,10 @@ export default function ShowMyDaycares() {
         </Modal.Body>
       </Modal>
       <h1>Your Daycares</h1>
-      <Button onClick={handleShowAddForm}>Add a Daycare</Button>
+      <Button className="addDaycare" onClick={handleShowAddForm}>Add a Daycare</Button>
       {daycares ? daycares.map(
-        (daycare, index) => (    
+        (daycare, index) => (  
+        <Container className="myDaycares">
           <Col key={index}>
             <Card style={{ width: '300px' }} className="dashboardCard" >
               <Card.Body>
@@ -90,7 +92,8 @@ export default function ShowMyDaycares() {
                 <Button onClick={() => handleEditClick(daycare)}>Edit</Button>
               </Card.Footer>
             </Card>
-          </Col>        
+          </Col>
+        </Container>        
         )
       ) : 'Loading...'}
     </>
