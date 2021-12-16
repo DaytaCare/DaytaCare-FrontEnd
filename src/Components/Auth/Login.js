@@ -1,3 +1,4 @@
+import './Login.css';
 import useAuth from '../Hooks/useAuth';
 
 export default function Login() {
@@ -7,11 +8,11 @@ export default function Login() {
         event.preventDefault();
 
         const form = event.target;
-        const { username, password} = form.elements;
+        const { username, password } = form.elements;
 
         const loginData = {
-            username:  username.value,
-            password:  password.value,
+            username: username.value,
+            password: password.value,
         };
         console.log(loginData);
 
@@ -20,10 +21,14 @@ export default function Login() {
     }
 
     return (
-        <form className="login-form" onSubmit = { handleLoginSubmit }>
-        <label>Username:  <input name="username" /></label>
-        <label> Password:  <input name="password" type="password"/></label>
-        <button type="submit">Log In</button>
-        </form>
+        <div>
+            <form className="login-form" onSubmit={handleLoginSubmit}>
+                <label>Username:  <input name="username" /></label>
+                <br />
+                <label> Password:  <input name="password" type="password" /></label>
+                <br />
+                <button type="submit" className="login-button">Log In</button>
+            </form>
+        </div>
     )
 }

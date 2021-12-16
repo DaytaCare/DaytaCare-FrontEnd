@@ -8,7 +8,7 @@
 }
 
 legend{
-    background-color: #a4d8e6bb;
+    background-color: #E7F0FE;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     border-bottom: 1px solid rgba(200, 200, 200, 0.5);
@@ -16,15 +16,25 @@ legend{
     text-align: center;
 }
 
+.signup-options{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .daycare-signup{
+    padding: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.parent-signup{
     padding: 15px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .btn{
     color: black;
-    background-color: #a4d8e6bb;
-    border: 1px solid #97c7d4bb !important;
+    background-color: #E7F0FE;
+    border: 1px solid #ccdcf5 !important;
 }
 
 .btn:hover{
@@ -32,5 +42,5 @@ legend{
 }
 
 .back-button{
-    margin-right: 10px;
+    margin-right: 5px;
 }
