@@ -1,14 +1,17 @@
-import React, { useState } from 'react'
-import { Button, Form } from 'react-bootstrap'
+import React, { useState  } from 'react'
+import { Button, Form, Col, Spinner } from 'react-bootstrap'
 import useAuth from '../Hooks/useAuth'
-//import useFetch from '../Hooks/useFetch'
+import useFetch from '../Hooks/useFetch'
+
 
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/daycares';
 
+const daytaCareApiAmenities = 'https://daytacare.azurewebsites.net/api/amenity';
+
+
 export default function DaycareAdd(props) {
-    //const { reload } = useFetch(daytaCareApi);
+
     const { user } = useAuth();
-    //const { hasPermission } = useAuth();
     const [daycareType, setDaycareType ] = useState('')
     const [name, setName ] = useState('')
     const [streetAddress, setStreetAddress ] = useState('')
@@ -20,30 +23,14 @@ export default function DaycareAdd(props) {
     const [price, setPrice ] = useState('')
     const [licenseNumber, setLicenseNumber ] = useState('')
     const [availability, setAvailability ] = useState(false)
+    const [amenityId, setAmenityId] = useState([])
     const onSave = props.onSave
 
+    const { data:  amenities } = useFetch(daytaCareApiAmenities);
 
-async function handleDaycareAdd(event) {
+    async function handleDaycareAdd(event) {
   event.preventDefault()
     console.log('Submitting...', );
-
-    //const form = event.target;
-   // const { daycareType,name,streetAddress,city,state,country,phone,email,price,licenseNumber,availability } = form.elements;
-
-    //const formData = {
-    //  daycareType:  daycareType.value,
-    //  name:  name.value,
-    //  streetAddress:  streetAddress.value,
-    //  city:  city.value,
-    //  state:  state.value,
-    //  country:  country.value,
-   //   phone:  phone.value,
-    //  email:  email.value,
-    //  price:  price.value,
-    //  licenseNumber:  licenseNumber.value,
-    //  availability:  availability,
-    //};
-    //console.log(formData);
 
     if (!user) {
         console.warn('Anonymous should not be allowed to add!');
@@ -52,22 +39,17 @@ async function handleDaycareAdd(event) {
 
     await fetch(`${daytaCareApi}`, {
         method:  'post',
-        body: JSON.stringify({ daycareType,name,streetAddress,city,state,country,phone,email,price,licenseNumber,availability }),
+        body: JSON.stringify({ daycareType,name,streetAddress,city,state,country,phone,email,price,licenseNumber,availability,amenityId }),
         headers: {
             'Authorization': `Bearer ${user.token}`,
             'Content-Type' : 'application/json',
         },
-        //body: JSON.stringify({ daycareType,name,streetAddress,city,state,country,phone,email,price,licenseNumber,availability }),
-
     })
-    //reload();
-    //console.log('Submitted successfully', formData);
+
     console.log('Submitted successfully');
     onSave();
-    //form.reset();
-}
 
-//let canCreate = hasPermission('create');
+}
 
 return (
       <Form onSubmit={ handleDaycareAdd } title="Add My Daycare">
@@ -130,7 +112,24 @@ return (
             onChange={e => setAvailability(e.target.checked)}
             />
         </Form.Group>
-        
+
+        <Form.Group className="mb-3">
+              <Form.Label as="legend" column sm={2}>Amenities</Form.Label>
+              <Col sm={10}>
+                {amenities ? amenities.map(amenity => (
+                  <Form.Check key={amenity.id}
+                    type="checkbox"
+                    label={amenity.name}
+                    name="amenityId"
+                    value={amenity.id} 
+                    checked={amenityId.includes(amenity.id)}
+                    onChange={e => setAmenityId(e.target.checked?[...amenityId, amenity.id]:amenityId.filter(id => id !== amenity.id))}/>
+                )) : <Spinner animation="grow" variant="danger" />
+                }
+              </Col>
+            </Form.Group>
+
+       
         <Button variant="primary" type="submit">Submit</Button>
       </Form>
 )
