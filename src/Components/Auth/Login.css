@@ -1,0 +1,19 @@
+.login-form{
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 10px;
+  width: 450px;
+  height: 250px;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto;
+  padding: 20px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.login-button{
+  margin-top: 10px;
+  margin-left: 10px;
+  color: black;
+  background-color: #E7F0FE;
+  border: 1px solid #ccdcf5 !important;
+}
