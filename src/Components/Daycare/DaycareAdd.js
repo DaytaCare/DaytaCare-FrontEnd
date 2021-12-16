@@ -1,5 +1,5 @@
 import React, { useState  } from 'react'
-import { Button, Form, Col } from 'react-bootstrap'
+import { Button, Form, Col, Spinner } from 'react-bootstrap'
 import useAuth from '../Hooks/useAuth'
 import useFetch from '../Hooks/useFetch'
 
@@ -10,8 +10,6 @@ const daytaCareApiAmenities = 'https://daytacare.azurewebsites.net/api/amenity';
 
 
 export default function DaycareAdd(props) {
-
-  const { data: amenities } = useFetch(daytaCareApiAmenities);
 
     const { user } = useAuth();
     const [daycareType, setDaycareType ] = useState('')
@@ -25,11 +23,9 @@ export default function DaycareAdd(props) {
     const [price, setPrice ] = useState('')
     const [licenseNumber, setLicenseNumber ] = useState('')
     const [availability, setAvailability ] = useState(false)
-    //const [amenities, setAmenities] = useState('')
     const onSave = props.onSave
 
-
-
+    const { data:  amenities } = useFetch(daytaCareApiAmenities);
 
     async function handleDaycareAdd(event) {
   event.preventDefault()
@@ -118,19 +114,21 @@ return (
             />
         </Form.Group>
 
-        <Form.Group>
+        <Form.Group className="mb-3">
               <Form.Label as="legend" column sm={2}>Amenities</Form.Label>
               <Col sm={10}>
-                {amenities.map(amenity => (
+                {amenities ? amenities.map(amenity => (
                   <Form.Check key={amenity.id}
                     type="checkbox"
                     label={amenity.name}
                     name="amenityId"
                     value={amenity.id} />
-                ))}
+                )) : <Spinner animation="grow" variant="danger" />
+                }
               </Col>
             </Form.Group>
-        
+
+       
         <Button variant="primary" type="submit">Submit</Button>
       </Form>
 )
