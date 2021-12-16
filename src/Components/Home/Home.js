@@ -6,7 +6,7 @@ function Home() {
   return(
     <>
       <div className="home">
-        <img className="aboutImg" src="/DaytaCare.png" alt="DaytaCare Logo"/>
+        {/* <img className="aboutImg" src="/DaytaCare.png" alt="DaytaCare Logo"/> */}
         <div className="about">
           <h5>About</h5>
 
