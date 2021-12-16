@@ -27,24 +27,6 @@ async function handleDaycareEdit(event) {
   event.preventDefault()
     console.log('Submitting...', );
 
-    //const form = event.target;
-   // const { daycareType,name,streetAddress,city,state,country,phone,email,price,licenseNumber,availability } = form.elements;
-
-    //const formData = {
-    //  daycareType:  daycareType.value,
-    //  name:  name.value,
-    //  streetAddress:  streetAddress.value,
-    //  city:  city.value,
-    //  state:  state.value,
-    //  country:  country.value,
-   //   phone:  phone.value,
-    //  email:  email.value,
-    //  price:  price.value,
-    //  licenseNumber:  licenseNumber.value,
-    //  availability:  availability,
-    //};
-    //console.log(formData);
-
     if (!user) {
         console.warn('Anonymous should not be allowed to add!');
         return;
@@ -57,17 +39,13 @@ async function handleDaycareEdit(event) {
             'Authorization': `Bearer ${user.token}`,
             'Content-Type' : 'application/json',
         },
-        //body: JSON.stringify({ daycareType,name,streetAddress,city,state,country,phone,email,price,licenseNumber,availability }),
 
     })
-    //reload();
-    //console.log('Submitted successfully', formData);
+
     console.log('Submitted successfully');
     onSave();
-    //form.reset();
-}
 
-//let canCreate = hasPermission('create');
+}
 
 return (
       <Form onSubmit={ handleDaycareEdit } title="Edit My Daycare">
