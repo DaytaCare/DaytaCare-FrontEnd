@@ -30,7 +30,9 @@ export default function useFetch(url, params, skipInitialFetch) {
         setLoading(false);
       }
 
-      catch (e) { console.error(e); }
+      catch (e) {
+        console.error(e);
+      }
     };
 
     setShouldFetch(false);
