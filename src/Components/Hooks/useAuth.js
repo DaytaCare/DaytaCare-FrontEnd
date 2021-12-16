@@ -17,6 +17,13 @@ return auth;
 export function AuthProvider(props) {
     const [user, setUser] = useState(null);
 
+    useEffect(() => {
+    console.log(`Checking for ${cookieName} cookie`);
+    const cookieToken = cookie.load(cookieName);
+    const cookieUser = processToken(cookieToken);
+    setUser(cookieUser);
+  }, []);
+
     const hasPermission = useCallback(function (permission) {
         if (!user) return false;
 
@@ -74,6 +81,7 @@ export function AuthProvider(props) {
       }
     
       function logout() {
+        cookie.remove(cookieName, { path: '/' });
         setUser(null);
       }
     
@@ -91,6 +99,9 @@ export function AuthProvider(props) {
       try {
         const payload = jwt.decode(user.token);
         if (payload) {
+          // Token looks legit, so let's save it
+          cookie.save(cookieName, user.token, { path: '/' });
+
           //Copy everything from the payload into user
           Object.assign(user, payload);
     
@@ -103,5 +114,25 @@ export function AuthProvider(props) {
       }
     
       return null;
+    }
+
+    function processToken(token) {
+      if (!token)
+        return null;
+      try {
+        const payload = jwt.decode(token);
+        if (payload){
+          return {
+            id: payload['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier'],
+            username: payload['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'],
+            ...payload
+          }
+        }
+        return null;
+      }
+      catch (e) {
+        console.warn(e);
+        return null;
+      }
     }
     
