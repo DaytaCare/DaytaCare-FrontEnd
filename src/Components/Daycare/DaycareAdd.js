@@ -23,6 +23,7 @@ export default function DaycareAdd(props) {
     const [price, setPrice ] = useState('')
     const [licenseNumber, setLicenseNumber ] = useState('')
     const [availability, setAvailability ] = useState(false)
+    const [amenityId, setAmenityId] = useState([])
     const onSave = props.onSave
 
     const { data:  amenities } = useFetch(daytaCareApiAmenities);
@@ -38,13 +39,11 @@ export default function DaycareAdd(props) {
 
     await fetch(`${daytaCareApi}`, {
         method:  'post',
-        body: JSON.stringify({ daycareType,name,streetAddress,city,state,country,phone,email,price,licenseNumber,availability }),
+        body: JSON.stringify({ daycareType,name,streetAddress,city,state,country,phone,email,price,licenseNumber,availability,amenityId }),
         headers: {
             'Authorization': `Bearer ${user.token}`,
             'Content-Type' : 'application/json',
         },
-
-
     })
 
     console.log('Submitted successfully');
@@ -122,7 +121,9 @@ return (
                     type="checkbox"
                     label={amenity.name}
                     name="amenityId"
-                    value={amenity.id} />
+                    value={amenity.id} 
+                    checked={amenityId.includes(amenity.id)}
+                    onChange={e => setAmenityId(e.target.checked?[...amenityId, amenity.id]:amenityId.filter(id => id !== amenity.id))}/>
                 )) : <Spinner animation="grow" variant="danger" />
                 }
               </Col>
