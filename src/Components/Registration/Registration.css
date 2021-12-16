@@ -1,0 +1,19 @@
+.centerP {
+    display: flex;
+    justify-content: 'center';
+    align-items: 'center';
+    height:150vh;  
+}
+
+.centerD {
+    display: flex;
+    justify-content: 'center';
+    align-items: 'center';
+    height:75vh;  
+}
+
+.formDP {
+    background: goldenrod;
+    padding: 1.5em;
+    border-radius: 1em;
+}

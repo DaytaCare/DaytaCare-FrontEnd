@@ -1,9 +1,12 @@
 import React from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, Row, Col } from 'react-bootstrap';
+import './Registration.css'
 
-export default function DaycareRegister() {
+const daytaCareApi = 'https://daytacare.azurewebsites.net/api/Users'
 
-    function handleDaycareRegisterSubmit(event) {
+export default function ParentRegister() {
+
+    async function handleDaycareRegisterSubmit(event) {
         event.preventDefault();
 
         const form = event.target;
@@ -13,28 +16,48 @@ export default function DaycareRegister() {
             email: email.value,
             username: username.value,
             password: password.value,
-            role: "Daycare Provider"
         };
-        console.log(daycareRegData);
+        console.log("Submitting....", daycareRegData);
+
+
+        const result = await fetch(`${daytaCareApi}/DaycareRegister`, {
+            method: 'post',
+            body: JSON.stringify(daycareRegData),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+
+        })
+
+        console.log(result);
         form.reset();
+        //onSave();
     }
 
     return (
-        <Form onSubmit={handleDaycareRegisterSubmit} title="Owner Registration Form">
-            <Form.Group className="mb-3" controlId="form.email">
-                <Form.Label>Email:</Form.Label>
-                <Form.Control type="email" placeholder="jane@example.com" value="email" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="form.username">
-                <Form.Label>Username:</Form.Label>
-                <Form.Control type="username" value="username" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="form.password">
-                <Form.Label>Password:</Form.Label>
-                <Form.Control name="password" type="password" value="password" />
-            </Form.Group>
+        <div className="centerD">
+        <Form onSubmit={handleDaycareRegisterSubmit} title="Owner Registration Form" className="formDP">
+            <Row>
+                <Col xs="auto">
+                    <Form.Group className="mb-3" controlId="form.email">
+                        <Form.Label>Email:</Form.Label>
+                        <Form.Control name="email" type="email" placeholder="jane@example.com" />
+                    </Form.Group>
 
-            <Button type="submit">Register</Button>
+                    <Form.Group className="mb-3" controlId="form.username">
+                        <Form.Label>Username:</Form.Label>
+                        <Form.Control name="username" />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="form.password">
+                        <Form.Label>Password:</Form.Label>
+                        <Form.Control name="password" type="password" />
+                    </Form.Group>
+
+                    <Button type="submit">Register</Button>
+                </Col>
+            </Row>
         </Form>
+        </div>
     )
 }
