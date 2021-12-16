@@ -1,6 +1,8 @@
 import React from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 
+const daytaCareApi = 'https://daytacare.azurewebsites.net/api/daycares';
+
 export default function DaycareRegister() {
 
     function handleDaycareRegisterSubmit(event) {

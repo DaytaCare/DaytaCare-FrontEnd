@@ -1,0 +1,12 @@
+.center {
+    display: flex;
+    justify-content: 'center';
+    align-items: 'center';
+    height:150vh;  
+}
+
+form {
+    background: #55acf3;
+    padding: 1.5em;
+    border-radius: 1em;
+}
