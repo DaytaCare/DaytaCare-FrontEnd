@@ -50,9 +50,9 @@ async function handleDaycareEdit(event) {
         return;
     }
 
-    await fetch(`${daytaCareApi}`, {
+    await fetch(`${daytaCareApi}/${daycare.daycareId}`, {
         method:  'put',
-        body: JSON.stringify({ daycareType,name,streetAddress,city,state,country,phone,email,price,licenseNumber,availability }),
+        body: JSON.stringify({ id: daycare.daycareId, daycareType,name,streetAddress,city,state,country,phone,email,price,licenseNumber,availability }),
         headers: {
             'Authorization': `Bearer ${user.token}`,
             'Content-Type' : 'application/json',

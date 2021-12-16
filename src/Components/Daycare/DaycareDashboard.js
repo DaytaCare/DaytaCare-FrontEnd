@@ -73,8 +73,8 @@ export default function ShowMyDaycares() {
       <h1>Your Daycares</h1>
       <Button onClick={handleShowAddForm}>Add a Daycare</Button>
       {daycares ? daycares.map(
-        (daycare) => (    
-          <Col>
+        (daycare, index) => (    
+          <Col key={index}>
             <Card style={{ width: '300px' }} className="dashboardCard" >
               <Card.Body>
                 <Card.Title>{daycare.name}</Card.Title>
