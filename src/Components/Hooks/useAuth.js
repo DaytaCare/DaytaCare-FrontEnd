@@ -1,5 +1,8 @@
-import { createContext, useContext, useEffect, useMemo, useState, useCallback } from 'react'
+import { createContext, useContext, useEffect, useMemo, useState, useCallback  } from 'react'
+import cookie from 'react-cookies';
 import jwt from 'jsonwebtoken'
+
+const cookieName = 'auth';
 
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/Users'
 
