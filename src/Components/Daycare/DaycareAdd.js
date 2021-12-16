@@ -5,10 +5,9 @@ import useAuth from '../Hooks/useAuth'
 
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/daycares';
 
+
 export default function DaycareAdd(props) {
-    //const { reload } = useFetch(daytaCareApi);
     const { user } = useAuth();
-    //const { hasPermission } = useAuth();
     const [daycareType, setDaycareType ] = useState('')
     const [name, setName ] = useState('')
     const [streetAddress, setStreetAddress ] = useState('')
@@ -20,30 +19,15 @@ export default function DaycareAdd(props) {
     const [price, setPrice ] = useState('')
     const [licenseNumber, setLicenseNumber ] = useState('')
     const [availability, setAvailability ] = useState(false)
+    const [amenities, setAmenities] = useState('')
     const onSave = props.onSave
 
 
-async function handleDaycareAdd(event) {
+
+
+    async function handleDaycareAdd(event) {
   event.preventDefault()
     console.log('Submitting...', );
-
-    //const form = event.target;
-   // const { daycareType,name,streetAddress,city,state,country,phone,email,price,licenseNumber,availability } = form.elements;
-
-    //const formData = {
-    //  daycareType:  daycareType.value,
-    //  name:  name.value,
-    //  streetAddress:  streetAddress.value,
-    //  city:  city.value,
-    //  state:  state.value,
-    //  country:  country.value,
-   //   phone:  phone.value,
-    //  email:  email.value,
-    //  price:  price.value,
-    //  licenseNumber:  licenseNumber.value,
-    //  availability:  availability,
-    //};
-    //console.log(formData);
 
     if (!user) {
         console.warn('Anonymous should not be allowed to add!');
@@ -57,17 +41,14 @@ async function handleDaycareAdd(event) {
             'Authorization': `Bearer ${user.token}`,
             'Content-Type' : 'application/json',
         },
-        //body: JSON.stringify({ daycareType,name,streetAddress,city,state,country,phone,email,price,licenseNumber,availability }),
+
 
     })
-    //reload();
-    //console.log('Submitted successfully', formData);
+
     console.log('Submitted successfully');
     onSave();
-    //form.reset();
-}
 
-//let canCreate = hasPermission('create');
+}
 
 return (
       <Form onSubmit={ handleDaycareAdd } title="Add My Daycare">
