@@ -37,7 +37,7 @@ function Header() {
           {!user && <Nav.Link as={Link} to='/Login' className="navbar-link">Log In</Nav.Link>}
           {user &&
             <div className="welcomeMsg">
-              Welcome back, {user.username}
+              Welcome back, {user.username}!
               <button className="logout" onClick={() => logout()}>Log Out</button>
             </div>
           }
