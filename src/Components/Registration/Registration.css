@@ -1,19 +1,36 @@
-.centerP {
-    display: flex;
-    justify-content: 'center';
-    align-items: 'center';
-    height:150vh;  
+.form-section{
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 10px;
+    width:40%;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-left: auto;
 }
 
-.centerD {
-    display: flex;
-    justify-content: 'center';
-    align-items: 'center';
-    height:75vh;  
+legend{
+    background-color: #a4d8e6bb;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
 }
 
-.formDP {
-    background: goldenrod;
-    padding: 1.5em;
-    border-radius: 1em;
+.daycare-signup{
+    padding: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.btn{
+    color: black;
+    background-color: #a4d8e6bb;
+    border: 1px solid #97c7d4bb !important;
+}
+
+.btn:hover{
+    background-color: #F4B9E5;
+}
+
+.back-button{
+    margin-right: 10px;
 }
