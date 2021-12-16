@@ -1,12 +1,18 @@
-import React, { useState } from 'react'
-import { Button, Form } from 'react-bootstrap'
+import React, { useState  } from 'react'
+import { Button, Form, Col } from 'react-bootstrap'
 import useAuth from '../Hooks/useAuth'
-//import useFetch from '../Hooks/useFetch'
+import useFetch from '../Hooks/useFetch'
+
 
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/daycares';
 
+const daytaCareApiAmenities = 'https://daytacare.azurewebsites.net/api/amenity';
+
 
 export default function DaycareAdd(props) {
+
+  const { data: amenities } = useFetch(daytaCareApiAmenities);
+
     const { user } = useAuth();
     const [daycareType, setDaycareType ] = useState('')
     const [name, setName ] = useState('')
@@ -19,7 +25,7 @@ export default function DaycareAdd(props) {
     const [price, setPrice ] = useState('')
     const [licenseNumber, setLicenseNumber ] = useState('')
     const [availability, setAvailability ] = useState(false)
-    const [amenities, setAmenities] = useState('')
+    //const [amenities, setAmenities] = useState('')
     const onSave = props.onSave
 
 
@@ -111,6 +117,19 @@ return (
             onChange={e => setAvailability(e.target.checked)}
             />
         </Form.Group>
+
+        <Form.Group>
+              <Form.Label as="legend" column sm={2}>Amenities</Form.Label>
+              <Col sm={10}>
+                {amenities.map(amenity => (
+                  <Form.Check key={amenity.id}
+                    type="checkbox"
+                    label={amenity.name}
+                    name="amenityId"
+                    value={amenity.id} />
+                ))}
+              </Col>
+            </Form.Group>
         
         <Button variant="primary" type="submit">Submit</Button>
       </Form>
