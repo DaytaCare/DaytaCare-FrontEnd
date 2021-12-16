@@ -1,10 +1,9 @@
 import './Login.css';
 import useAuth from '../Hooks/useAuth';
-import { useHistory } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 export default function Login() {
-    const { login } = useAuth();
-    const history = useHistory();
+    const { login, user } = useAuth();
 
     function handleLoginSubmit(event) {
         event.preventDefault();
@@ -20,9 +19,10 @@ export default function Login() {
 
         login(loginData);
         form.reset();
-        
-        
-        history.push("");
+    }
+
+    if (user) {
+        return <Redirect to="/" />
     }
 
     return (

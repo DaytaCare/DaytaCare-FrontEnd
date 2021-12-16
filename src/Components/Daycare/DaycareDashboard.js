@@ -4,7 +4,9 @@ import { Card, Col, Button, Modal, Container } from 'react-bootstrap';
 import DaycareAdd from '../Daycare/DaycareAdd';
 import DaycareEdit from '../Daycare/DaycareEdit';
 import { useState } from 'react';
-import './DaycareDashboard.css'
+import './DaycareDashboard.css';
+import { Redirect } from 'react-router-dom';
+
 
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/daycares';
 
@@ -55,10 +57,15 @@ export default function ShowMyDaycares() {
     })
     reload();
   }
+
+  if (!user)
+  {
+    return <Redirect to="/login" />
+  }
+  
   if (isLoading) {
     return (<h2>Loading...</h2>)
   }
-
 
   return (
     <>
