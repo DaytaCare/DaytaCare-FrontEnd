@@ -11,9 +11,9 @@ function Header() {
       <Navbar className="navbar">
         <Navbar.Brand href="#" className="navbar-brand">
           <img
-            alt=""
+            alt="DaytaCare Logo"
             src="/DaytaCare.png"
-            width="100"
+            width="99"
             height="100"
           />
           {' '}
