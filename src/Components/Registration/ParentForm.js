@@ -39,7 +39,7 @@ export default function ParentRegister() {
     }
 
     return (
-        <div className="center">
+        <div className="centerP">
         <Form onSubmit={handleParentRegisterSubmit} title="Parent Registration Form">
             <Row>
                 <Col xs="auto">

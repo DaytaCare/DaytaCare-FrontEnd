@@ -1,11 +1,12 @@
 import React from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
+import './Registration.css'
 
-const daytaCareApi = 'https://daytacare.azurewebsites.net/api/daycares';
+const daytaCareApi = 'https://daytacare.azurewebsites.net/api/Users'
 
-export default function DaycareRegister() {
+export default function ParentRegister() {
 
-    function handleDaycareRegisterSubmit(event) {
+    async function handleDaycareRegisterSubmit(event) {
         event.preventDefault();
 
         const form = event.target;
@@ -16,36 +17,47 @@ export default function DaycareRegister() {
             username: username.value,
             password: password.value,
         };
-        console.log(daycareRegData);
+        console.log("Submitting....", daycareRegData);
+
+
+        const result = await fetch(`${daytaCareApi}/DaycareRegister`, {
+            method: 'post',
+            body: JSON.stringify(daycareRegData),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+
+        })
+
+        console.log(result);
         form.reset();
+        //onSave();
     }
 
     return (
-        <>
+        <div className="centerD">
         <Form onSubmit={handleDaycareRegisterSubmit} title="Owner Registration Form">
-        <Row>
+            <Row>
                 <Col xs="auto">
-            <Form.Group className="mb-3" controlId="form.email">
-                <Form.Label>Email:</Form.Label>
-                <Form.Control name="email" type="email" placeholder="jane@example.com"  />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="form.username">
-                <Form.Label>Username:</Form.Label>
-                <Form.Control name="username" type="username" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="form.password">
-                <Form.Label>Password:</Form.Label>
-                <Form.Control name="password" type="password" />
-                <Form.Text id="passwordHelpBlock" muted>
-                            Your password must be 8-20 characters long, contain letters and numbers, and
-                            must not contain spaces, special characters, or emoji.
-                        </Form.Text>
-            </Form.Group>
+                    <Form.Group className="mb-3" controlId="form.email">
+                        <Form.Label>Email:</Form.Label>
+                        <Form.Control name="email" type="email" placeholder="jane@example.com" />
+                    </Form.Group>
 
-            <Button type="submit">Register</Button>
-            </Col>
+                    <Form.Group className="mb-3" controlId="form.username">
+                        <Form.Label>Username:</Form.Label>
+                        <Form.Control name="username" />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="form.password">
+                        <Form.Label>Password:</Form.Label>
+                        <Form.Control name="password" type="password" />
+                    </Form.Group>
+
+                    <Button type="submit">Register</Button>
+                </Col>
             </Row>
         </Form>
-        </>
+        </div>
     )
 }
