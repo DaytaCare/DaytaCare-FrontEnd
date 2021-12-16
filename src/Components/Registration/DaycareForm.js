@@ -35,29 +35,30 @@ export default function ParentRegister() {
     }
 
     return (
-        <div className="centerD">
-        <Form onSubmit={handleDaycareRegisterSubmit} title="Owner Registration Form" className="formDP">
-            <Row>
-                <Col xs="auto">
-                    <Form.Group className="mb-3" controlId="form.email">
-                        <Form.Label>Email:</Form.Label>
-                        <Form.Control name="email" type="email" placeholder="jane@example.com" />
-                    </Form.Group>
+        <div className="centerD" title="Owner Registration Form">
+            <Form onSubmit={handleDaycareRegisterSubmit} className="formDP">
+                <legend>Owner Registration Form</legend>
+                <Row>
+                    <Col xs="auto">
+                        <Form.Group className="mb-3" controlId="form.email">
+                            <Form.Label>Email:</Form.Label>
+                            <Form.Control name="email" type="email" placeholder="jane@example.com" />
+                        </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="form.username">
-                        <Form.Label>Username:</Form.Label>
-                        <Form.Control name="username" />
-                    </Form.Group>
+                        <Form.Group className="mb-3" controlId="form.username">
+                            <Form.Label>Username:</Form.Label>
+                            <Form.Control name="username" />
+                        </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="form.password">
-                        <Form.Label>Password:</Form.Label>
-                        <Form.Control name="password" type="password" />
-                    </Form.Group>
+                        <Form.Group className="mb-3" controlId="form.password">
+                            <Form.Label>Password:</Form.Label>
+                            <Form.Control name="password" type="password" />
+                        </Form.Group>
 
-                    <Button type="submit">Register</Button>
-                </Col>
-            </Row>
-        </Form>
+                        <Button type="submit">Register</Button>
+                    </Col>
+                </Row>
+            </Form>
         </div>
     )
 }

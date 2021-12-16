@@ -44,6 +44,7 @@ export default function ParentRegister() {
             <Row>
                 <Col xs="auto">
                     <Form.Group className="mb-3" controlId="form.email">
+                    <legend>Parent Registration Form</legend>
                         <Form.Label>Email:</Form.Label>
                         <Form.Control name="email" type="email" placeholder="jane@example.com" />
                     </Form.Group>
