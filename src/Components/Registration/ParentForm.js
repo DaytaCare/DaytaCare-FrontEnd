@@ -40,7 +40,7 @@ export default function ParentRegister() {
 
     return (
         <div className="centerP">
-        <Form onSubmit={handleParentRegisterSubmit} title="Parent Registration Form">
+        <Form onSubmit={handleParentRegisterSubmit} title="Parent Registration Form" className="formDP">
             <Row>
                 <Col xs="auto">
                     <Form.Group className="mb-3" controlId="form.email">
