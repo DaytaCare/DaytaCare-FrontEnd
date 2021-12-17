@@ -92,8 +92,10 @@ export default function ShowMyDaycares() {
             <Card className="dashboardCard" >
               <Card.Body>
                 <Card.Title>{daycare.name}</Card.Title>
-                <Card.Text>Type: {daycare.daycareType}</Card.Text>
+                <br />
+                <Card.Text>Email: {daycare.email}</Card.Text>
                 <Card.Text>{daycare.streetAddress}, {daycare.city}</Card.Text>
+                <Card.Text>Monthly price per child: ${daycare.price}</Card.Text>
               </Card.Body>
               <Card.Footer>
                 <Button onClick={() => handleDeleteDaycare(daycare)}>Delete</Button>
