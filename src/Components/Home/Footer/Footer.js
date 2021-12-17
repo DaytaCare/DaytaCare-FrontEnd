@@ -7,7 +7,7 @@ function Footer() {
     <>
         {/* <hr className="bottom-stripe"/> */}
 
-      <Navbar fixed="bottom" className='footer'>
+      <Navbar className='footer'>
           <Navbar.Brand href="/">
           <img
             alt="DaytaCare Logo"
@@ -16,11 +16,9 @@ function Footer() {
             height="50"
           />
             {' '}
-            &copy; DaytaCare {new Date().getFullYear()}
+            &copy;DaytaCare {new Date().getFullYear()}
           </Navbar.Brand>
       </Navbar>
-
-
     </>
   )
 }

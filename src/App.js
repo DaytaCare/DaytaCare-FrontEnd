@@ -21,6 +21,7 @@ function App() {
 
   return (
     <>
+    {/* <div class="content"> */}
       <Header />
       <TopNav/>
       <Switch>
@@ -50,6 +51,7 @@ function App() {
         </Route>
       </Switch>
       <Footer />
+      {/* </div> */}
     </>
   );
 }
