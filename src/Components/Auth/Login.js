@@ -35,7 +35,7 @@ export default function Login() {
                         <Form.Control type="text" name="username" placeholder="Username" />
                     </FloatingLabel>
                     <br />
-                    <FloatingLabel controlId="floatingInput" label="Password" className="loginPassword" input="password">     
+                    <FloatingLabel controlId="floatingInput" label="Password" className="loginPassword" input="password">
                         <Form.Control type="password" name="password" placeholder="Password" />
                     </FloatingLabel>\
                     <Button type="submit" className="login-button">Log In</Button>
