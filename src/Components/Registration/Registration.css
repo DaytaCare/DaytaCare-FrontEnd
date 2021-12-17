@@ -45,3 +45,18 @@ legend{
 .back-button{
     margin-right: 5px;
 }
+
+.signupCard {
+    width:300px;
+    margin-top: 15px;
+    margin-bottom:15px;
+    margin-left:auto;
+    margin-right:auto;
+    /* margin:0 auto; */
+}
+
+.register {
+    margin-left: auto;
+    margin-right:auto;
+    width:50%;
+}
