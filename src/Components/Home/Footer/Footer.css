@@ -4,6 +4,7 @@
 }
 
 .bottom-stripe{
-  height: 10rem;
+  height: 2rem !important;
   background-color: #99d9f5f5;
+  opacity: 100;
 }
