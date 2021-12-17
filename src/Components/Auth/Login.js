@@ -29,6 +29,7 @@ export default function Login() {
     return (
         <>
             <Form className="login-form" onSubmit={handleLoginSubmit}>
+                <h3>Log In to Continue</h3>
                 <Form.Group>
                     <FloatingLabel controlId="floatingInput"
                         label="Username"
