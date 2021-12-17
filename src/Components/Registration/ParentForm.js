@@ -2,10 +2,14 @@ import React from 'react';
 import { Form, Button, Row } from 'react-bootstrap';
 import './ParentForm.css'
 import './Registration.css'
+import { useHistory } from 'react-router-dom';
 
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/Users'
 
 export default function ParentRegister() {
+
+    const history = useHistory();
+
     async function handleParentRegisterSubmit(event) {
         event.preventDefault();
         const form = event.target;
@@ -32,6 +36,7 @@ export default function ParentRegister() {
         console.log(result);
         form.reset();
         //onSave();
+        history.push("/Login")
     }
 
     return (
