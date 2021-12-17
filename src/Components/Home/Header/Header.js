@@ -9,7 +9,7 @@ function Header() {
   return (
     <>
       <Navbar className="navbar">
-        <Navbar.Brand href="#" className="navbar-brand">
+        <Navbar.Brand href="/" className="navbar-brand">
           <img
             alt="DaytaCare Logo"
             src="/DaytaCare.png"
@@ -28,27 +28,25 @@ function Header() {
           </NavItem>
           <Nav.Link as={Link} to="/DaycareSearch" className="navbar-link">Find a Daycare</Nav.Link>
           <NavItem className="tab2">
-            <Nav.Link as={Link} to="/DaycareDashboard" className="navbar-link">Daycare Dashboard</Nav.Link>
+          {user && <Nav.Link as={Link} to="/DaycareDashboard" className="navbar-link">Daycare Dashboard</Nav.Link>}
           </NavItem>
         </Nav>
-
         <Nav>
           <NavItem>
           {!user && <Nav.Link as={Link} to='/Login' className="navbar-link">Log In</Nav.Link>}
           {user &&
             <div className="welcomeMsg">
               Welcome back, {user.username}!
-              <button className="logout" onClick={() => logout()}>Log Out</button>
+              <button className="logout" onClick={() => logout()}>Log Out</button>            
             </div>
           }
           </NavItem>
           <NavItem>
-            <Nav.Link as={Link} to="/Registration" className="navbar-link">Sign Up!</Nav.Link>
+          {!user && <Nav.Link as={Link} to="/Registration" className="navbar-link">Sign Up!</Nav.Link>}
           </NavItem>
         </Nav>
       </Navbar>
     </>
   )
 }
-
 export default Header;
