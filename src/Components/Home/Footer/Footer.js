@@ -1,4 +1,4 @@
-import { Container, Navbar } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 import './Footer.css';
 
 
@@ -17,7 +17,8 @@ function Footer() {
             &copy; DaytaCare
           </Navbar.Brand>
       </Navbar>
-      <Container fluid className='bottom-stripe'>&copy;DaytaCare</Container>
+
+      <hr className="bottom-stripe"/>
     </>
   )
 }
