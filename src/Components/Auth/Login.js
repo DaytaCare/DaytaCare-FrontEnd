@@ -29,7 +29,7 @@ export default function Login() {
     return (
         <>
             <Form className="login-form" onSubmit={handleLoginSubmit}>
-                <h3>Log In to Continue</h3>
+                <h4 className="form-title">Log In to Continue</h4>
                 <Form.Group>
                     <FloatingLabel controlId="floatingInput"
                         label="Username"

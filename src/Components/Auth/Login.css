@@ -1,8 +1,13 @@
+.form-title{
+  margin-bottom: 35px;
+  margin-top: 20px;
+}
+
 .login-form{
   border: 1px solid rgb(200, 200, 200);
   border-radius: 10px;
   width: 450px;
-  height: 250px;
+  height: 350px;
   margin-right: auto;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -13,7 +18,7 @@
 }
 
 .login-button{
-  margin-top: 20px;
+  margin-top: 30px;
   margin-left: 15px;
   color: black;
   background-color: #E7F0FE;
