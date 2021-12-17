@@ -1,10 +1,12 @@
 import useFetch from '../Hooks/useFetch';
 import useAuth from '../Hooks/useAuth';
-import { Card, Col, Button, Modal } from 'react-bootstrap';
+import { Card, Col, Button, Modal, Container, Row } from 'react-bootstrap';
 import DaycareAdd from '../Daycare/DaycareAdd';
 import DaycareEdit from '../Daycare/DaycareEdit';
 import { useState } from 'react';
+import './DaycareDashboard.css';
 import { Redirect } from 'react-router-dom';
+
 
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/daycares';
 
@@ -69,19 +71,25 @@ export default function ShowMyDaycares() {
     <>
     
       <Modal show={isEditing} onHide={handleClose}>
+        <Modal.Body>
         <Modal.Header closeButton />
         <DaycareEdit onSave={handleUpdateDaycare} daycare={currentDaycare} />
+        </Modal.Body>
         </Modal>
       <Modal show={showAddForm} onHide={handleClose}>
+        <Modal.Body>
         <Modal.Header closeButton />
         <DaycareAdd onSave={handleClose} />
+        </Modal.Body>
       </Modal>
       <h1>Your Daycares</h1>
-      <Button onClick={handleShowAddForm}>Add a Daycare</Button>
+      <Button className="addDaycare" onClick={handleShowAddForm}>Add a Daycare</Button>
+      <Container className="myDaycares">
+        <Row>
       {daycares ? daycares.map(
-        (daycare, index) => (    
-          <Col key={index}>
-            <Card style={{ width: '300px' }} className="dashboardCard" >
+        (daycare, index) => (       
+          <Col key={index} sm={6} md={4}>
+            <Card className="dashboardCard" >
               <Card.Body>
                 <Card.Title>{daycare.name}</Card.Title>
                 <Card.Text>Type: {daycare.daycareType}</Card.Text>
@@ -92,9 +100,12 @@ export default function ShowMyDaycares() {
                 <Button onClick={() => handleEditClick(daycare)}>Edit</Button>
               </Card.Footer>
             </Card>
-          </Col>        
+          </Col>
+                
         )
       ) : 'Loading...'}
+      </Row>
+      </Container>
     </>
   );
 }
