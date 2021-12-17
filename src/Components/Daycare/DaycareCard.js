@@ -17,8 +17,9 @@ function DaycareCard(props) {
     <Card className='text-center' onClick={showModal} style={{ width: '25rem' }}>
       <Card.Body>
         <Card.Title>{daycare.name}</Card.Title>
-        <Card.Text>{daycare.streetAddress}, {daycare.city}, {daycare.state}</Card.Text>
-        <Card.Text>{daycare.phone}</Card.Text>
+        <br />
+        <Card.Text>Address: {daycare.streetAddress}, {daycare.city}, {daycare.state}</Card.Text>
+        <Card.Text>Monthly price per child: ${daycare.price}</Card.Text>
       </Card.Body>
       <Card.Footer>
         <Button onClick={showModal}>View</Button>
