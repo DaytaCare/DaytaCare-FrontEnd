@@ -15,12 +15,14 @@ import DaycareDashboard from './Components/Daycare/DaycareDashboard';
 import Registration from './Components/Registration/Registration';
 import DaycareForm from './Components/Registration/DaycareForm';
 import ParentForm from './Components/Registration/ParentForm';
+import TopNav from './Components/Home/TopNav/TopNav.js';
 
 function App() {
 
   return (
     <>
       <Header />
+      <TopNav/>
       <Switch>
         <Route exact path="/">
           <Home />
