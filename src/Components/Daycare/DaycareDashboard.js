@@ -82,7 +82,7 @@ export default function ShowMyDaycares() {
         <DaycareAdd onSave={handleClose} />
         </Modal.Body>
       </Modal>
-      <h3>Your Daycares</h3>
+      <h3 className="yourDaycares">Your Daycares</h3>
       <Button className="addDaycare" onClick={handleShowAddForm}>Add a Daycare</Button>
       <Container className="myDaycares">
         <Row>
