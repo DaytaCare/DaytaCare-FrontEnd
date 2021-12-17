@@ -30,13 +30,18 @@ export default function Login() {
         <>
             <Form className="login-form" onSubmit={handleLoginSubmit}>
                 <Form.Group>
-                    <FloatingLabel>
+                    <FloatingLabel controlId="floatingInput"
+                        label="Username"
+                        className="loginUsername">
                         <Form.Control type="text" placeholder="Username" />
                     </FloatingLabel>
-                    <label>Username:  <input name="username" /></label>
                     <br />
-                    <label> Password:  <input name="password" type="password" /></label>
-                    <br />
+                    <FloatingLabel controlId="floatingInput"
+                        label="Password"
+                        className="loginPassword">
+                        <Form.Control type="text" placeholder="Username" />
+                    </FloatingLabel>
+                   
                     <Button type="submit" className="login-button">Log In</Button>
                 </Form.Group>
             </Form>
