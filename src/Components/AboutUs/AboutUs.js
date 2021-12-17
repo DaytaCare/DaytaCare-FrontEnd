@@ -16,7 +16,7 @@ class AboutUs extends React.Component {
       <Container className="AboutUs">
         <Row>
           <Col>
-            <Card style={{ width: '260px' }} >
+            <Card className="aboutUsCards" style={{ width: '260px' }} >
               <Card.Img variant="top" width="300px" height="180px" src={yvette1} alt="yvette" />
               <Card.Body>
                 <Card.Title>Yvette</Card.Title>
@@ -40,7 +40,7 @@ class AboutUs extends React.Component {
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: '260px' }} >
+            <Card className="aboutUsCards" style={{ width: '260px' }} >
               <Card.Img variant="top" width="300px" height="180px" src={ian} alt="ian" />
               <Card.Body>
                 <Card.Title>Ian</Card.Title>
@@ -64,7 +64,7 @@ class AboutUs extends React.Component {
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: '260px' }} >
+            <Card className="aboutUsCards" style={{ width: '260px' }} >
               <Card.Img variant="top" width="300px" height="180px" src={misti} alt="misti" />
               <Card.Body>
                 <Card.Title>Misti</Card.Title>
@@ -88,7 +88,7 @@ class AboutUs extends React.Component {
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: '260px' }} >
+            <Card className="aboutUsCards" style={{ width: '260px' }} >
               <Card.Img variant="top" width="300px" height="180px" src={jaren} alt="jaren" />
               <Card.Body>
                 <Card.Title>Jaren</Card.Title>

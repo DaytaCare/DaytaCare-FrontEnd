@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Spinner, Row, Col, Form, Button, Card } from 'react-bootstrap';
+import { Spinner, Row, Col, Form, Button, Card, Container } from 'react-bootstrap';
 import { Route } from 'react-router-dom';
 import DaycareDetailModal from './DaycareDetailModal';
 import DaycareCard from './DaycareCard';
 import useFetch from '../Hooks/useFetch';
+import './DaycareSearch.css'
 
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/parents/search';
 const daytaCareApiAmenities = 'https://daytacare.azurewebsites.net/api/amenity';
@@ -35,6 +36,7 @@ function DaycareSearch() {
 
   return (
     <>
+    <Container className="searchCard">
       <Card className="mt-4" style={{ width: '40rem' }}>
         <Card.Body>
           <Card.Title className="mb-4">Search Daycares</Card.Title>
@@ -76,6 +78,7 @@ function DaycareSearch() {
           </Form>
         </Card.Body>
       </Card>
+      </Container>
       <Route path="/DaycareSearch/:id">
         <DaycareDetailModal />
       </Route>

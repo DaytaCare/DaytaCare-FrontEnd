@@ -1,6 +1,7 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Col } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
+import './DaycareCard.css'
 
 function DaycareCard(props) {
 
@@ -12,6 +13,7 @@ function DaycareCard(props) {
   }
 
   return (
+    <Col>
     <Card className='text-center' onClick={showModal} style={{ width: '25rem' }}>
       <Card.Body>
         <Card.Title>{daycare.name}</Card.Title>
@@ -22,6 +24,7 @@ function DaycareCard(props) {
         <Button onClick={showModal}>View</Button>
       </Card.Footer>
     </Card>
+    </Col>
   )
 }
 
