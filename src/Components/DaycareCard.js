@@ -19,7 +19,7 @@ function DaycareCard(props) {
         <Card.Text>{daycare.phone}</Card.Text>
       </Card.Body>
       <Card.Footer>
-        <Button onClick={showModal}>Open</Button>
+        <Button onClick={showModal}>View</Button>
       </Card.Footer>
     </Card>
   )
