@@ -3,8 +3,16 @@
   src: url('/src/Components/Home/css/Roklien.ttf');
 }
 
+.card{
+  border-radius: 5px;
+}
+
 .bottom-stripe{
   height: 2rem !important;
   background-color: #99d9f5f5;
   opacity: 100;
+}
+
+.footer{
+  background-color: transparent;
 }

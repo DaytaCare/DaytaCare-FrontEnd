@@ -1,6 +1,5 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
-import './DaycareForm.css';
 import './Registration.css';
 import { useHistory } from 'react-router-dom';
 
