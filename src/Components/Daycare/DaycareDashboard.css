@@ -10,7 +10,11 @@ margin-top:15px;
 
 .dashboardCard {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  min-height: 220px;
+  min-height: 320px;
   margin: 15px;
   /* background-color: #F4B9E5; */
+}
+
+.yourDaycares {
+  margin-top: 15px;
 }
