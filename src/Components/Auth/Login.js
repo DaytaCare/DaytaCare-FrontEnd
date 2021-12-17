@@ -31,11 +31,11 @@ export default function Login() {
             <Form className="login-form" onSubmit={handleLoginSubmit}>
                 <h4 className="form-title">Log In to Continue</h4>
                 <Form.Group>
-                    <FloatingLabel controlId="floatingInput" name="Username" className="loginUsername">
+                    <FloatingLabel controlId="floatingInput" label="Username" className="loginUsername">
                         <Form.Control type="text" name="username" placeholder="Username" />
                     </FloatingLabel>
                     <br />
-                    <FloatingLabel controlId="floatingInput" label="Password" className="loginPassword" input="password">
+                    <FloatingLabel controlId="floatingInput" label="Password" className="loginPassword">
                         <Form.Control type="password" name="password" placeholder="Password" />
                     </FloatingLabel>
                     <Button type="submit" className="login-button">Log In</Button>
