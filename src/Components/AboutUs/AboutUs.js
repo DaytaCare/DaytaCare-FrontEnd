@@ -20,9 +20,10 @@ class AboutUs extends React.Component {
               <Card.Img variant="top" width="300px" height="180px" src={yvette1} alt="yvette" />
               <Card.Body>
                 <Card.Title>Yvette</Card.Title>
-                <Card.Text style={{ fontSize: '15px' }} className="scroll" >I have an MBA in Finance, over 15 years of leadership and management experience. I am an expert change leader specializing in identifying efficiencies, improving employee engagement, standardizing processes, communication, analysis, development, and measurement of key performance metrics.
-                Besides attending DeltaV, I enjoy volunteering my skills as a data and research analysis utilizing Power BI.
-                My goal is to continually improve myself and most recently to reinvent myself into a career in website coding where I can utilize my passions to the benefit of the customer.
+                <Card.Text style={{ fontSize: '15px' }} className="scroll" >I have an MBA in Finance, over 15 years of leadership and management experience. I am an expert change leader specializing in identifying efficiencies, improving employee engagement, standardizing processes, communication, analysis, development, and measurement of key performance metrics. 
+              <br />
+              <br />
+                Most recently, I have reinvented myself.  I am a software developer.  My life goal is continually improving myself and utilize my passions to the benefit of the customer.
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
