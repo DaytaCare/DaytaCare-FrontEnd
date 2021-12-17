@@ -5,7 +5,9 @@ import './Footer.css';
 function Footer() {
   return (
     <>
-      <Navbar fixed="bottom" >
+        <hr className="bottom-stripe"/>
+
+      <Navbar>
           <Navbar.Brand href="/">
           <img
             alt="DaytaCare Logo"
@@ -18,7 +20,7 @@ function Footer() {
           </Navbar.Brand>
       </Navbar>
 
-      <hr className="bottom-stripe"/>
+
     </>
   )
 }
