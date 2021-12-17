@@ -1,6 +1,5 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
-import './DaycareForm.css';
 import './Registration.css';
 
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/Users'
