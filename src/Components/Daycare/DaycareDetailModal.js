@@ -22,7 +22,7 @@ function DaycareDetailModal() {
   }
 
   return (
-    <Modal show={true} onHide={closeModal}>
+    <Modal show={true} onHide={closeModal} backdrop="static">
       <Modal.Header closeButton>
         <Modal.Title>{daycare.name}</Modal.Title>
       </Modal.Header>
