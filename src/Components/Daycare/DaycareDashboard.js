@@ -1,6 +1,6 @@
 import useFetch from '../Hooks/useFetch';
 import useAuth from '../Hooks/useAuth';
-import { Card, Col, Button, Modal, Container } from 'react-bootstrap';
+import { Card, Col, Button, Modal, Container, Row } from 'react-bootstrap';
 import DaycareAdd from '../Daycare/DaycareAdd';
 import DaycareEdit from '../Daycare/DaycareEdit';
 import { useState } from 'react';
@@ -84,11 +84,12 @@ export default function ShowMyDaycares() {
       </Modal>
       <h1>Your Daycares</h1>
       <Button className="addDaycare" onClick={handleShowAddForm}>Add a Daycare</Button>
+      <Container className="myDaycares">
+        <Row>
       {daycares ? daycares.map(
-        (daycare, index) => (  
-        <Container className="myDaycares">
-          <Col key={index}>
-            <Card style={{ width: '300px' }} className="dashboardCard" >
+        (daycare, index) => (       
+          <Col key={index} sm={6} md={4}>
+            <Card className="dashboardCard" >
               <Card.Body>
                 <Card.Title>{daycare.name}</Card.Title>
                 <Card.Text>Type: {daycare.daycareType}</Card.Text>
@@ -100,9 +101,11 @@ export default function ShowMyDaycares() {
               </Card.Footer>
             </Card>
           </Col>
-        </Container>        
+                
         )
       ) : 'Loading...'}
+      </Row>
+      </Container>
     </>
   );
 }
