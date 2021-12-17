@@ -8,7 +8,7 @@ import {
 import Header from './Components/Home/Header/Header.js';
 import Home from './Components/Home/Home.js'
 import AboutUs from './Components/AboutUs/AboutUs.js';
-import DaycareSearch from './Components/DaycareSearch';
+import DaycareSearch from './Components/Daycare/DaycareSearch';
 import Footer from './Components/Home/Footer/Footer.js';
 import Login from './Components/Auth/Login';
 import DaycareDashboard from './Components/Daycare/DaycareDashboard';

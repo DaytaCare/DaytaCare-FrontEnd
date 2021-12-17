@@ -3,7 +3,7 @@ import { Spinner, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import { Route } from 'react-router-dom';
 import DaycareDetailModal from './DaycareDetailModal';
 import DaycareCard from './DaycareCard';
-import useFetch from '../Components/Hooks/useFetch';
+import useFetch from '../Hooks/useFetch';
 
 const daytaCareApi = 'https://daytacare.azurewebsites.net/api/parents/search';
 const daytaCareApiAmenities = 'https://daytacare.azurewebsites.net/api/amenity';
