@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Button, Col, Row } from 'react-bootstrap';
+import { Form, Button, Row } from 'react-bootstrap';
 import './ParentForm.css'
 import './Registration.css'
 
