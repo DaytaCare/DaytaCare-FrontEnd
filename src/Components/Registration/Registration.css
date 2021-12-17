@@ -47,16 +47,17 @@ legend{
 }
 
 .signupCard {
-    width:300px;
+    width:350px;
     margin-top: 15px;
     margin-bottom:15px;
     margin-left:auto;
     margin-right:auto;
+    text-align: center;
     /* margin:0 auto; */
 }
 
 .register {
     margin-left: auto;
     margin-right:auto;
-    width:50%;
+    width:80%;
 }
