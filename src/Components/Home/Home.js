@@ -3,9 +3,10 @@ import './FeaturedDaycare/FeaturedDaycare.css'
 import FeaturedDaycare from "./FeaturedDaycare/FeaturedDaycare";
 
 function Home() {
-  return(
+  return (
     <>
       <div className="home">
+        {/* <marquee><img alt="" src="marquee.png" /></marquee> */}
         {/* <img className="aboutImg" src="/DaytaCare.png" alt="DaytaCare Logo"/> */}
         <div className="about">
           <h5>About</h5>
@@ -16,7 +17,7 @@ function Home() {
 
         <div>
           <h5>Featured Daycares</h5>
-          <FeaturedDaycare/>
+          <FeaturedDaycare />
         </div>
       </div>
     </>
