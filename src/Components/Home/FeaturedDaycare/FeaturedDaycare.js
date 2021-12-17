@@ -9,7 +9,7 @@ function FeaturedDaycare() {
         <Card className="card">
             <Card.Img className='featured' variant='top' src="https://bit.ly/3GOmay3"/>
             <Card.Footer>
-              <Button href="#">Visit the Website</Button>
+              <Button href="#">Visit</Button>
             </Card.Footer>
           </Card>
           <Card className="card">
@@ -21,7 +21,7 @@ function FeaturedDaycare() {
           <Card className="card">
             <Card.Img className='featured' variant='top' src="https://bit.ly/3yyFcp4" />
             <Card.Footer>
-              <Button href="#">View</Button>
+              <Button href="#">Visit</Button>
             </Card.Footer>
           </Card>
         </CardGroup>
