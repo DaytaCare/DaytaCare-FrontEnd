@@ -14,7 +14,27 @@ h1{
   font-family: 'RoklienRegular';
 }
 
+h2{
+  text-align: center;
+  font-family: 'RoklienRegular';
+}
+
+h3{
+  text-align: center;
+  font-family: 'RoklienRegular';
+}
+
+h4{
+  text-align: center;
+  font-family: 'RoklienRegular';
+}
+
 h5{
+  text-align: center;
+  font-family: 'RoklienRegular';
+}
+
+h6{
   text-align: center;
   font-family: 'RoklienRegular';
 }
