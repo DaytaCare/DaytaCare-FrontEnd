@@ -1,19 +1,25 @@
+@font-face{
+    font-family: 'RoklienRegular';
+    src: url('/src/Components/Home/css/Roklien.ttf');
+  }
+
 .form-section{
     border: 1px solid rgb(200, 200, 200);
     border-radius: 10px;
     width:40%;
+    margin-top: 2rem;
     margin-right: auto;
-    margin-bottom: 30px;
+    margin-bottom: 10rem;
     margin-left: auto;
+    font-size: 15px;
 }
 
 legend{
-    background-color: #E7F0FE;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
-    border-bottom: 1px solid rgba(200, 200, 200, 0.5);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'RoklienRegular';
     text-align: center;
+    padding: 20px;
 }
 
 .daycare-signup{
