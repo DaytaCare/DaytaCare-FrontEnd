@@ -1,6 +1,7 @@
 import './Login.css';
 import useAuth from '../Hooks/useAuth';
 import { Redirect } from 'react-router-dom';
+import { Form, Button, FloatingLabel } from 'react-bootstrap';
 
 export default function Login() {
     const { login, user } = useAuth();
@@ -26,14 +27,19 @@ export default function Login() {
     }
 
     return (
-        <div>
-            <form className="login-form" onSubmit={handleLoginSubmit}>
-                <label>Username:  <input name="username" /></label>
-                <br />
-                <label> Password:  <input name="password" type="password" /></label>
-                <br />
-                <button type="submit" className="login-button">Log In</button>
-            </form>
-        </div>
+        <>
+            <Form className="login-form" onSubmit={handleLoginSubmit}>
+                <Form.Group>
+                    <FloatingLabel>
+                        <Form.Control type="text" placeholder="Username" />
+                    </FloatingLabel>
+                    <label>Username:  <input name="username" /></label>
+                    <br />
+                    <label> Password:  <input name="password" type="password" /></label>
+                    <br />
+                    <Button type="submit" className="login-button">Log In</Button>
+                </Form.Group>
+            </Form>
+        </>
     )
 }
