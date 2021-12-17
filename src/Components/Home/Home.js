@@ -6,11 +6,8 @@ function Home() {
   return (
     <>
       <div className="home">
-        {/* <marquee><img alt="" src="marquee.png" /></marquee> */}
-        {/* <img className="aboutImg" src="/DaytaCare.png" alt="DaytaCare Logo"/> */}
         <div className="about">
           <h5>About</h5>
-
           <p>Cupcake ipsum dolor sit amet topping gingerbread. Powder donut chocolate cake cupcake caramels liquorice cookie gummi bears. Ice cream lollipop chocolate pastry ice cream muffin cupcake lollipop. Sweet roll dessert pie sweet roll soufflé tiramisu. Chocolate pudding cookie cupcake marzipan liquorice sugar plum. Croissant macaroon tart cheesecake jelly halvah sugar plum sesame snaps. Tart jujubes bear claw dessert icing chupa chups bonbon muffin. Lollipop toffee bonbon chocolate cake cake pastry macaroon.
           </p>
         </div>
