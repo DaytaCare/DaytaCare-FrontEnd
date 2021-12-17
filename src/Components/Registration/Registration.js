@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, Container } from 'react-bootstrap';
+import { Button, Card, Container, Row } from 'react-bootstrap';
 import './Registration.css'
 // import { Link } from 'react-router-dom';
 //import DaycareForm from './DaycareForm';
@@ -10,6 +10,7 @@ export default function Registration() {
     return (
         <div className="signupOptions">
             <Container className="register">
+                <Row>
             <Card className="signupCard" >
               <Card.Body>
                 <Card.Title>Register as a Parent</Card.Title>
@@ -22,6 +23,7 @@ export default function Registration() {
             <Button className="registerButton" as="a" href="/DaycareForm">Daycare</Button>
             </Card.Body>
             </Card>
+            </Row>
             </Container>  
         </div>
 
