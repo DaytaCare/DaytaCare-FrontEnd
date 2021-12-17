@@ -3,3 +3,7 @@
   src: url('/src/Components/Home/css/Roklien.ttf');
 }
 
+.bottom-stripe{
+  background-color: #99d9f5f5;
+  text-align: center;
+}
